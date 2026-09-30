@@ -1,0 +1,81 @@
+{
+  "n_drugs_all_three": 33,
+  "Random Forest": {
+    "n_drugs": 33,
+    "n_rows": 99,
+    "CTRP": {
+      "n": 33,
+      "spearman": 0.671,
+      "p": 1.9131367916021678e-05,
+      "ci": [
+        0.414,
+        0.821
+      ]
+    },
+    "GDSC2": {
+      "n": 33,
+      "spearman": 0.735,
+      "p": 1.1122796952064292e-06,
+      "ci": [
+        0.495,
+        0.868
+      ]
+    },
+    "PRISM": {
+      "n": 33,
+      "spearman": 0.474,
+      "p": 0.005370829548298359,
+      "ci": [
+        0.137,
+        0.717
+      ]
+    },
+    "pooled": {
+      "spearman": 0.443,
+      "drug_cluster_bootstrap_ci": [
+        0.138,
+        0.644
+      ],
+      "within_assay_permutation_p": 0.0001999600079984003
+    }
+  },
+  "Logistic Regression": {
+    "n_drugs": 33,
+    "n_rows": 99,
+    "CTRP": {
+      "n": 33,
+      "spearman": 0.673,
+      "p": 1.7915404512239796e-05,
+      "ci": [
+        0.391,
+        0.843
+      ]
+    },
+    "GDSC2": {
+      "n": 33,
+      "spearman": 0.733,
+      "p": 1.2309388832799296e-06,
+      "ci": [
+        0.481,
+        0.876
+      ]
+    },
+    "PRISM": {
+      "n": 33,
+      "spearman": 0.643,
+      "p": 5.438330002607009e-05,
+      "ci": [
+        0.355,
+        0.825
+      ]
+    },
+    "pooled": {
+      "spearman": 0.504,
+      "drug_cluster_bootstrap_ci": [
+        0.206,
+        0.698
+      ],
+      "within_assay_permutation_p": 0.0001999600079984003
+    }
+  }
+}

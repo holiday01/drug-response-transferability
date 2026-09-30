@@ -1,0 +1,16 @@
+{
+  "seed": 42,
+  "splits": 10,
+  "test_frac": 0.35,
+  "top_k": 200,
+  "var_q": 0.5,
+  "min_ext_class": 15,
+  "ref_sizes": [
+    20,
+    50,
+    100
+  ],
+  "ref_draws": 20,
+  "fitted_file": "GDSC2_fitted_dose_response_27Oct23.xlsx",
+  "generated": "2026-09-30 12:23:52"
+}

@@ -1,0 +1,10 @@
+[12:18:02] loading data ...
+  drug panel (original drugs with an external set): 59
+  GDSC2 replicate columns parsed: 30254/30254
+  fitted rows 242036; mapped to ModelID 0.998
+  !! VINCRISTINE: no fitted AUC for GDSC2 IDs [np.int64(1818)]
+  median Spearman fitted~trapz=0.882, fitted~legacy=0.899 (min 0.307)
+
+[12:18:34] running 58 drugs x 10 splits ...
+  rows: 580
+[12:23:52] done. -> results/rev1_independent

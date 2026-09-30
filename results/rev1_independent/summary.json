@@ -1,0 +1,511 @@
+{
+  "n_drugs": 58,
+  "n_splits": 10,
+  "test_lines_median": 247.0,
+  "concordance_vs_external": {
+    "fitted|Logistic Regression": {
+      "n_drugs": 58,
+      "spearman": 0.8786,
+      "p": 1.2867388945839206e-19,
+      "ci": [
+        0.767,
+        0.934
+      ],
+      "per_split_median": 0.8041,
+      "per_split_range": [
+        0.7516,
+        0.9137
+      ],
+      "partial_internal": [
+        0.7099,
+        6.288264389211747e-10,
+        55
+      ],
+      "median_ext_auroc": 0.656
+    },
+    "fitted|Random Forest": {
+      "n_drugs": 58,
+      "spearman": 0.8463,
+      "p": 6.05152161004007e-17,
+      "ci": [
+        0.715,
+        0.921
+      ],
+      "per_split_median": 0.7947,
+      "per_split_range": [
+        0.7412,
+        0.8595
+      ],
+      "partial_internal": [
+        0.6743,
+        8.915360405503798e-09,
+        55
+      ],
+      "median_ext_auroc": 0.676
+    },
+    "fitted|XGBoost": {
+      "n_drugs": 58,
+      "spearman": 0.8722,
+      "p": 4.958986137066704e-19,
+      "ci": [
+        0.748,
+        0.936
+      ],
+      "per_split_median": 0.8206,
+      "per_split_range": [
+        0.7841,
+        0.868
+      ],
+      "partial_internal": [
+        0.7089,
+        6.81631997707607e-10,
+        55
+      ],
+      "median_ext_auroc": 0.686
+    },
+    "fitted|SVM (RBF)": {
+      "n_drugs": 58,
+      "spearman": 0.862,
+      "p": 3.658315571383913e-18,
+      "ci": [
+        0.743,
+        0.93
+      ],
+      "per_split_median": 0.813,
+      "per_split_range": [
+        0.7725,
+        0.8795
+      ],
+      "partial_internal": [
+        0.7099,
+        6.290706749897362e-10,
+        55
+      ],
+      "median_ext_auroc": 0.691
+    },
+    "fitted|DNN (MLP)": {
+      "n_drugs": 58,
+      "spearman": 0.8458,
+      "p": 6.505089188790393e-17,
+      "ci": [
+        0.716,
+        0.914
+      ],
+      "per_split_median": 0.7805,
+      "per_split_range": [
+        0.7159,
+        0.8684
+      ],
+      "partial_internal": [
+        0.6769,
+        7.417219466198711e-09,
+        55
+      ],
+      "median_ext_auroc": 0.679
+    },
+    "trapz|Logistic Regression": {
+      "n_drugs": 57,
+      "spearman": 0.847,
+      "p": 1.0081861997391707e-16,
+      "ci": [
+        0.723,
+        0.916
+      ],
+      "per_split_median": 0.7741,
+      "per_split_range": [
+        0.725,
+        0.8431
+      ],
+      "partial_internal": [
+        0.6931,
+        3.2343311481878047e-09,
+        54
+      ],
+      "median_ext_auroc": 0.659
+    },
+    "trapz|Random Forest": {
+      "n_drugs": 57,
+      "spearman": 0.8418,
+      "p": 2.34770975669166e-16,
+      "ci": [
+        0.715,
+        0.911
+      ],
+      "per_split_median": 0.7788,
+      "per_split_range": [
+        0.7249,
+        0.8284
+      ],
+      "partial_internal": [
+        0.721,
+        3.6980947757920175e-10,
+        54
+      ],
+      "median_ext_auroc": 0.693
+    },
+    "trapz|XGBoost": {
+      "n_drugs": 57,
+      "spearman": 0.8504,
+      "p": 5.722371966794031e-17,
+      "ci": [
+        0.728,
+        0.917
+      ],
+      "per_split_median": 0.7912,
+      "per_split_range": [
+        0.7398,
+        0.8407
+      ],
+      "partial_internal": [
+        0.7209,
+        3.721011587584597e-10,
+        54
+      ],
+      "median_ext_auroc": 0.687
+    },
+    "trapz|SVM (RBF)": {
+      "n_drugs": 57,
+      "spearman": 0.8475,
+      "p": 9.248815967635836e-17,
+      "ci": [
+        0.726,
+        0.914
+      ],
+      "per_split_median": 0.7839,
+      "per_split_range": [
+        0.7083,
+        0.8508
+      ],
+      "partial_internal": [
+        0.7321,
+        1.4443746839576012e-10,
+        54
+      ],
+      "median_ext_auroc": 0.698
+    },
+    "trapz|DNN (MLP)": {
+      "n_drugs": 57,
+      "spearman": 0.8291,
+      "p": 1.6483255546203003e-15,
+      "ci": [
+        0.689,
+        0.905
+      ],
+      "per_split_median": 0.7628,
+      "per_split_range": [
+        0.7141,
+        0.8182
+      ],
+      "partial_internal": [
+        0.7138,
+        6.625926421792535e-10,
+        54
+      ],
+      "median_ext_auroc": 0.693
+    },
+    "legacy|Logistic Regression": {
+      "n_drugs": 57,
+      "spearman": 0.8358,
+      "p": 6.102887541893695e-16,
+      "ci": [
+        0.709,
+        0.903
+      ],
+      "per_split_median": 0.7693,
+      "per_split_range": [
+        0.7122,
+        0.8515
+      ],
+      "partial_internal": [
+        0.6301,
+        1.952308468744608e-07,
+        54
+      ],
+      "median_ext_auroc": 0.661
+    },
+    "legacy|Random Forest": {
+      "n_drugs": 57,
+      "spearman": 0.8219,
+      "p": 4.678859028311614e-15,
+      "ci": [
+        0.684,
+        0.9
+      ],
+      "per_split_median": 0.7623,
+      "per_split_range": [
+        0.7327,
+        0.7987
+      ],
+      "partial_internal": [
+        0.664,
+        2.4314653738207178e-08,
+        54
+      ],
+      "median_ext_auroc": 0.708
+    },
+    "legacy|XGBoost": {
+      "n_drugs": 57,
+      "spearman": 0.8435,
+      "p": 1.789759369649833e-16,
+      "ci": [
+        0.721,
+        0.908
+      ],
+      "per_split_median": 0.7775,
+      "per_split_range": [
+        0.7184,
+        0.8122
+      ],
+      "partial_internal": [
+        0.6809,
+        7.735605535260407e-09,
+        54
+      ],
+      "median_ext_auroc": 0.707
+    },
+    "legacy|SVM (RBF)": {
+      "n_drugs": 57,
+      "spearman": 0.8273,
+      "p": 2.1492368328459518e-15,
+      "ci": [
+        0.702,
+        0.901
+      ],
+      "per_split_median": 0.7649,
+      "per_split_range": [
+        0.7179,
+        0.8095
+      ],
+      "partial_internal": [
+        0.673,
+        1.3276471595636664e-08,
+        54
+      ],
+      "median_ext_auroc": 0.715
+    },
+    "legacy|DNN (MLP)": {
+      "n_drugs": 57,
+      "spearman": 0.8096,
+      "p": 2.455573570274367e-14,
+      "ci": [
+        0.667,
+        0.891
+      ],
+      "per_split_median": 0.751,
+      "per_split_range": [
+        0.6846,
+        0.7852
+      ],
+      "partial_internal": [
+        0.6557,
+        4.140069803735332e-08,
+        54
+      ],
+      "median_ext_auroc": 0.713
+    }
+  },
+  "leaky_vs_independent_RF_fitted": {
+    "spearman_independent": 0.8463,
+    "spearman_leaky": 0.8495,
+    "median_abs_diff_concordance": 0.0056
+  },
+  "reference_size_sweep_RF_fitted": {
+    "ref20": {
+      "n_drugs": 58,
+      "spearman": 0.8261,
+      "ci": [
+        0.687,
+        0.91
+      ],
+      "median_within_drug_sd_of_concordance": 0.1864
+    },
+    "ref50": {
+      "n_drugs": 58,
+      "spearman": 0.8513,
+      "ci": [
+        0.719,
+        0.923
+      ],
+      "median_within_drug_sd_of_concordance": 0.1112
+    },
+    "ref100": {
+      "n_drugs": 58,
+      "spearman": 0.8409,
+      "ci": [
+        0.709,
+        0.919
+      ],
+      "median_within_drug_sd_of_concordance": 0.07
+    },
+    "full_reference": {
+      "median_n_ref": 333.0,
+      "spearman": 0.8463
+    }
+  },
+  "screen_RF_fitted": {
+    "screen_auc_median": 0.892,
+    "screen_auc_range": [
+      0.853,
+      0.922
+    ],
+    "fixed_0p5_pooled_over_splits": {
+      "sensitivity": 0.715,
+      "specificity": 0.909,
+      "ppv": 0.866,
+      "note": "pooled drug x split; splits are not independent"
+    },
+    "nested_threshold_median": 0.483,
+    "nested_heldout_accuracy_median": 0.759
+  },
+  "transfer_rate_by_bin_RF_fitted": {
+    "(-1.0, 0.2]": {
+      "k": 0,
+      "n": 8,
+      "rate": 0.0,
+      "wilson95": [
+        0.0,
+        0.324
+      ]
+    },
+    "(0.2, 0.35]": {
+      "k": 2,
+      "n": 10,
+      "rate": 0.2,
+      "wilson95": [
+        0.057,
+        0.51
+      ]
+    },
+    "(0.35, 0.5]": {
+      "k": 4,
+      "n": 18,
+      "rate": 0.222,
+      "wilson95": [
+        0.09,
+        0.452
+      ]
+    },
+    "(0.5, 0.65]": {
+      "k": 14,
+      "n": 17,
+      "rate": 0.824,
+      "wilson95": [
+        0.59,
+        0.938
+      ]
+    },
+    "(0.65, 1.0]": {
+      "k": 5,
+      "n": 5,
+      "rate": 1.0,
+      "wilson95": [
+        0.566,
+        1.0
+      ]
+    }
+  },
+  "internal_vs_external": {
+    "fitted|Logistic Regression": {
+      "median_internal": 0.71,
+      "median_external": 0.656,
+      "median_drop_pts": 3.89
+    },
+    "fitted|Random Forest": {
+      "median_internal": 0.767,
+      "median_external": 0.676,
+      "median_drop_pts": 6.19
+    },
+    "fitted|XGBoost": {
+      "median_internal": 0.759,
+      "median_external": 0.686,
+      "median_drop_pts": 5.45
+    },
+    "fitted|SVM (RBF)": {
+      "median_internal": 0.771,
+      "median_external": 0.691,
+      "median_drop_pts": 6.18
+    },
+    "fitted|DNN (MLP)": {
+      "median_internal": 0.757,
+      "median_external": 0.679,
+      "median_drop_pts": 6.07
+    },
+    "trapz|Logistic Regression": {
+      "median_internal": 0.712,
+      "median_external": 0.659,
+      "median_drop_pts": 3.77
+    },
+    "trapz|Random Forest": {
+      "median_internal": 0.769,
+      "median_external": 0.693,
+      "median_drop_pts": 5.34
+    },
+    "trapz|XGBoost": {
+      "median_internal": 0.759,
+      "median_external": 0.687,
+      "median_drop_pts": 4.03
+    },
+    "trapz|SVM (RBF)": {
+      "median_internal": 0.774,
+      "median_external": 0.698,
+      "median_drop_pts": 4.55
+    },
+    "trapz|DNN (MLP)": {
+      "median_internal": 0.759,
+      "median_external": 0.693,
+      "median_drop_pts": 5.29
+    },
+    "legacy|Logistic Regression": {
+      "median_internal": 0.712,
+      "median_external": 0.661,
+      "median_drop_pts": 3.67
+    },
+    "legacy|Random Forest": {
+      "median_internal": 0.769,
+      "median_external": 0.708,
+      "median_drop_pts": 5.36
+    },
+    "legacy|XGBoost": {
+      "median_internal": 0.759,
+      "median_external": 0.707,
+      "median_drop_pts": 3.76
+    },
+    "legacy|SVM (RBF)": {
+      "median_internal": 0.774,
+      "median_external": 0.715,
+      "median_drop_pts": 4.28
+    },
+    "legacy|DNN (MLP)": {
+      "median_internal": 0.759,
+      "median_external": 0.713,
+      "median_drop_pts": 4.26
+    }
+  },
+  "gdsc2_summary_agreement": {
+    "median_fitted_vs_trapz": 0.882,
+    "median_fitted_vs_legacy": 0.899,
+    "min_fitted_vs_legacy": 0.307,
+    "worst_legacy": [
+      [
+        "CRIZOTINIB",
+        0.307
+      ],
+      [
+        "A-1065-5",
+        0.398
+      ],
+      [
+        "M-39831",
+        0.402
+      ],
+      [
+        "MIRA 1",
+        0.42
+      ],
+      [
+        "NELARABINE",
+        0.526
+      ]
+    ]
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "table1": {
+    "Logistic Regression": {
+      "n": 58,
+      "spearman": 0.879,
+      "pearson": 0.869,
+      "ols_r2": 0.756,
+      "ols_slope": 0.496
+    },
+    "Random Forest": {
+      "n": 58,
+      "spearman": 0.846,
+      "pearson": 0.845,
+      "ols_r2": 0.715,
+      "ols_slope": 0.551
+    },
+    "XGBoost": {
+      "n": 58,
+      "spearman": 0.872,
+      "pearson": 0.864,
+      "ols_r2": 0.746,
+      "ols_slope": 0.569
+    },
+    "SVM (RBF)": {
+      "n": 58,
+      "spearman": 0.862,
+      "pearson": 0.858,
+      "ols_r2": 0.736,
+      "ols_slope": 0.559
+    },
+    "DNN (MLP)": {
+      "n": 58,
+      "spearman": 0.846,
+      "pearson": 0.837,
+      "ols_r2": 0.7,
+      "ols_slope": 0.522
+    },
+    "Model average": {
+      "n": 58,
+      "spearman": 0.86,
+      "pearson": 0.861,
+      "ols_r2": 0.742,
+      "ols_slope": 0.539
+    }
+  },
+  "screen_auc_drug_level": 0.908,
+  "screen_auc_model_average": 0.904,
+  "table2": [
+    {
+      "threshold": "full",
+      "n": 58,
+      "precision": null,
+      "recall": null,
+      "ext": 0.676,
+      "drop_pts": 6.2
+    },
+    {
+      "threshold": 0.3,
+      "n": 43,
+      "precision": 0.535,
+      "recall": 0.92,
+      "ext": 0.725,
+      "drop_pts": 6.3
+    },
+    {
+      "threshold": 0.4,
+      "n": 38,
+      "precision": 0.605,
+      "recall": 0.92,
+      "ext": 0.735,
+      "drop_pts": 6.0
+    },
+    {
+      "threshold": 0.5,
+      "n": 22,
+      "precision": 0.864,
+      "recall": 0.76,
+      "ext": 0.805,
+      "drop_pts": 3.2
+    }
+  ],
+  "n_transferable": 25,
+  "discarded_panel_median_ext": 0.628,
+  "tertiles": {
+    "low": {
+      "median_conc": 0.22,
+      "median_int": 0.704,
+      "median_ext": 0.569,
+      "drop_pts": 7.2
+    },
+    "mid": {
+      "median_conc": 0.44,
+      "median_int": 0.766,
+      "median_ext": 0.671,
+      "drop_pts": 9.2
+    },
+    "high": {
+      "median_conc": 0.61,
+      "median_int": 0.832,
+      "median_ext": 0.808,
+      "drop_pts": 2.3
+    }
+  },
+  "lodo": {
+    "roc_auc": 0.875,
+    "r2": 0.696,
+    "rmse_pts": 6.6,
+    "brier": 0.2,
+    "brier_null": 0.245,
+    "calibration_bins": {
+      "(-0.001, 0.25]": {
+        "n": 2,
+        "mean_pred": 0.221,
+        "observed": 0.0
+      },
+      "(0.25, 0.5]": {
+        "n": 44,
+        "mean_pred": 0.409,
+        "observed": 0.318
+      },
+      "(0.5, 0.75]": {
+        "n": 12,
+        "mean_pred": 0.545,
+        "observed": 0.917
+      }
+    }
+  },
+  "baselines": {
+    "conc": {
+      "screen_auc": 0.908,
+      "lodo_r2": 0.696,
+      "spearman_with_ext": 0.846
+    },
+    "i": {
+      "screen_auc": 0.864,
+      "lodo_r2": 0.424,
+      "spearman_with_ext": 0.732
+    },
+    "ctrp_dr": {
+      "screen_auc": 0.672,
+      "lodo_r2": 0.067,
+      "spearman_with_ext": 0.369
+    },
+    "gdsc2_dr": {
+      "screen_auc": 0.818,
+      "lodo_r2": 0.36,
+      "spearman_with_ext": 0.617
+    },
+    "conc_minus_gdsc2_dr_screen_auc_ci": [
+      0.011,
+      0.189
+    ],
+    "conc_plus_gdsc2_dr_lodo_r2": 0.689,
+    "spearman_conc_vs_gdsc2_dr": 0.753,
+    "spearman_conc_vs_ctrp_dr": 0.492
+  },
+  "three_assay_pairs": {
+    "CTRP->GDSC2": {
+      "n": 33,
+      "spearman": 0.935
+    },
+    "CTRP->PRISM": {
+      "n": 33,
+      "spearman": 0.7
+    },
+    "GDSC2->CTRP": {
+      "n": 33,
+      "spearman": 0.761
+    },
+    "GDSC2->PRISM": {
+      "n": 33,
+      "spearman": 0.661
+    },
+    "PRISM->CTRP": {
+      "n": 33,
+      "spearman": 0.736
+    },
+    "PRISM->GDSC2": {
+      "n": 33,
+      "spearman": 0.713
+    }
+  },
+  "three_assay_pooled": {
+    "n": 198,
+    "n_unique_drugs": 33,
+    "spearman": 0.778
+  }
+}
