@@ -1,0 +1,9 @@
+scored_model,threshold,n_selected,n_transferable,precision,recall,subset_median_external,subset_median_drop_pts,roc_auc_of_screen
+Random Forest,0.3,43,29,0.651,0.966,0.743,4.4,0.907
+Random Forest,0.4,34,29,0.765,0.897,0.749,4.2,0.907
+Random Forest,0.488,26,29,0.885,0.793,0.779,3.2,0.907
+Random Forest,0.5,21,29,0.905,0.655,0.784,3.2,0.907
+ext_mean,0.3,43,28,0.628,0.964,0.728,5.2,0.921
+ext_mean,0.4,34,28,0.735,0.893,0.753,5.0,0.921
+ext_mean,0.488,26,28,0.923,0.857,0.782,4.6,0.921
+ext_mean,0.5,21,28,0.905,0.679,0.783,4.4,0.921

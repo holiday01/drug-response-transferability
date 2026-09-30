@@ -1,0 +1,12 @@
+{
+  "n_drugs": 8,
+  "n_drugs_with_rho": 5,
+  "median_patAUROC_mean": 0.535,
+  "spearman_rho_vs_patAUROCmean": 0.4,
+  "spearman_rho_vs_patAUROCmean_p": 0.5046315754686912,
+  "spearman_rho_vs_patAUROC_RF": 0.4,
+  "n_above_chance": 6,
+  "n_total": 8,
+  "seed": 42,
+  "generated": "2026-07-11 01:12:55"
+}

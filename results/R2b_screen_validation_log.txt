@@ -1,0 +1,14 @@
+[LODO classification] transferable = external Random Forest >= 0.7
+  in-sample concordance ROC-AUC        = 0.907
+  leave-one-drug-out ROC-AUC           = 0.880
+  leave-one-drug-out PR-AUC (base 0.49) = 0.891
+
+[LODO regression] predict continuous external AUROC from concordance
+  out-of-sample R2  = 0.630
+  out-of-sample RMSE= 0.068 AUROC points = 6.8
+
+[calibration] observed transfer rate by concordance bin:
+  rho <0.30       n=16  transfer_rate=0.06  median_external=0.553
+  rho 0.30-0.45   n=13  transfer_rate=0.31  median_external=0.645
+  rho 0.45-0.60   n=20  transfer_rate=0.70  median_external=0.744
+  rho >0.60       n=10  transfer_rate=1.00  median_external=0.806

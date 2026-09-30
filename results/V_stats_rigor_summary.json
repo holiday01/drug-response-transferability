@@ -1,0 +1,26 @@
+{
+  "observed_spearman": 0.808,
+  "permutation_p": 4.999750012499375e-05,
+  "n_perm": 20000,
+  "boot_ci": [
+    0.678,
+    0.891
+  ],
+  "alt_metrics": {
+    "spearman": {
+      "spearman_with_ext": 0.808,
+      "p": 1.0183311642985074e-14
+    },
+    "pearson_z": {
+      "spearman_with_ext": 0.642,
+      "p": 4.3239641709714577e-08
+    },
+    "kendall": {
+      "spearman_with_ext": 0.804,
+      "p": 1.7636053481338273e-14
+    }
+  },
+  "partial_spearman_full": 0.59,
+  "partial_p": 8.623022407530154e-07,
+  "n_drugs": 59
+}

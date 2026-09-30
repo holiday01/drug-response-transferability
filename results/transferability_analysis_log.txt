@@ -1,0 +1,44 @@
+[data] 59 drugs with a valid independent (GDSC2) external set
+[data] concordance rho: median 0.459  range -0.042..0.754
+
+================ R1  concordance predicts external AUROC ================
+  Logistic Regression  Spearman=+0.835 (p=2.0e-16)  Pearson=+0.826  OLS R2=0.682 slope=+0.454
+  Random Forest        Spearman=+0.808 (p=1.1e-14)  Pearson=+0.808  OLS R2=0.653 slope=+0.462
+  XGBoost              Spearman=+0.840 (p=9.8e-17)  Pearson=+0.833  OLS R2=0.693 slope=+0.466
+  SVM (RBF)            Spearman=+0.824 (p=1.1e-15)  Pearson=+0.829  OLS R2=0.688 slope=+0.490
+  DNN (MLP)            Spearman=+0.791 (p=8.9e-14)  Pearson=+0.785  OLS R2=0.617 slope=+0.439
+  ext_mean             Spearman=+0.834 (p=2.5e-16)  Pearson=+0.833  OLS R2=0.695 slope=+0.462
+
+  partial Spearman(concordance, external | internal) [Random Forest] = +0.581 (p=1.4e-06)
+  -> concordance predicts transfer even after controlling for drug difficulty
+
+================ R2  transferability screening -> reliable subset ================
+  low  concordance (n=20, rho~0.22): internal=0.696 external=0.571 drop=+7.6 pts
+  mid  concordance (n=19, rho~0.46): internal=0.781 external=0.696 drop=+7.9 pts
+  high concordance (n=20, rho~0.61): internal=0.834 external=0.788 drop=+3.2 pts
+
+  Screen: predict 'transferable' (external AUROC >= 0.7) from concordance
+  [Random Forest] concordance ROC-AUC for transferability = 0.907
+  [ext_mean] concordance ROC-AUC for transferability = 0.921
+
+  operating points (primary=RF external):
+    thr>=0.3: select 43/59 drugs, precision=0.651, recall=0.966, subset external=0.743, drop=+4.4 pts
+    thr>=0.4: select 34/59 drugs, precision=0.765, recall=0.897, subset external=0.749, drop=+4.2 pts
+    thr>=0.488: select 26/59 drugs, precision=0.885, recall=0.793, subset external=0.779, drop=+3.2 pts
+    thr>=0.5: select 21/59 drugs, precision=0.905, recall=0.655, subset external=0.784, drop=+3.2 pts
+
+  HEADLINE (RF): full panel median external=0.696, drop=+5.0 pts
+    screened subset (rho>=0.5, n=21): external=0.784 [0.748-0.821], drop=+3.2 pts
+    discarded subset (rho<0.5, n=38): external=0.626 (near/among chance)
+
+================ R5  molecular/data determinants of concordance ================
+[load] CTRP AUC + GDSC2 viability matrices for per-drug data features ...
+  per-drug determinant features computed for 59 drugs
+    concordance vs ctrp_dynrange   : Spearman=+0.568 (p=2.75e-06, n=59)
+    concordance vs gdsc_dynrange   : Spearman=+0.789 (p=1.20e-13, n=59)
+    concordance vs lineage_entropy : Spearman=-0.327 (p=1.15e-02, n=59)
+    concordance vs int_RF          : Spearman=+0.687 (p=1.82e-09, n=59)
+    concordance vs n_ctrp          : Spearman=-0.136 (p=3.05e-01, n=59)
+
+  multivariable OLS concordance ~ [ctrp_dynrange, gdsc_dynrange, lineage_entropy] (standardized), R2=0.604
+    std. betas: dynrange_ctrp=-0.026, dynrange_gdsc=+0.163, lineage_entropy=-0.024  (n=59)

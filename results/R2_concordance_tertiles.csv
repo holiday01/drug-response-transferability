@@ -1,0 +1,4 @@
+tertile,n,rho_median,median_internal,median_external,median_drop_pts
+low,20,0.218,0.696,0.571,7.6
+mid,19,0.459,0.781,0.696,7.9
+high,20,0.608,0.834,0.788,3.2

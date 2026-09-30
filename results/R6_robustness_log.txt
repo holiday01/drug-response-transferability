@@ -1,0 +1,12 @@
+[01:19:54] loading expression ...
+  shared drugs 67
+
+[01:20:01] === bidirectional: train GDSC2, test CTRP ===
+  drugs with reverse external set: 58
+  Logistic Regression  Spearman(rho,ext_CTRP)=+0.855 (p=1.3e-17)  int=0.669 ext=0.684 drop=+2.1
+  Random Forest        Spearman(rho,ext_CTRP)=+0.764 (p=2.9e-12)  int=0.746 ext=0.730 drop=+1.4
+  SVM (RBF)            Spearman(rho,ext_CTRP)=+0.819 (p=3.9e-15)  int=0.738 ext=0.723 drop=+1.7
+
+[01:20:39] === regression: continuous CTRP->GDSC2 transfer ===
+  drugs: 60; median internal Spearman=0.434, median external Spearman=0.342
+  Spearman(concordance, external regression Spearman) = +0.828 (p=3.2e-16)

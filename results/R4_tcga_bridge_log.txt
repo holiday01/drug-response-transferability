@@ -1,0 +1,22 @@
+[01:12:12] gene map ...
+[01:12:12] loading CCLE expression ...
+  CCLE (1699, 19215)
+[01:12:17] mapping TCGA genes ...
+  common protein-coding genes CCLE∩TCGA: 19125
+[01:12:32] loading TCGA expression (common genes) ...
+  TCGA primary-tumor samples: 1114
+
+[01:12:38] === TCGA patient bridge ===
+  CARBOPLATIN      n_pat=172 (118R/54NR) rho=nan  patAUROC mean=0.530 RF=0.564 [0.477-0.653]
+  CYCLOPHOSPHAMIDE n_pat=101 (96R/5NR) rho=-0.042  patAUROC mean=0.363 RF=0.322 [0.040-0.675]
+  DOCETAXEL        n_pat=105 (68R/37NR) rho=0.591  patAUROC mean=0.537 RF=0.557 [0.443-0.667]
+  DOXORUBICIN      n_pat=100 (68R/32NR) rho=nan  patAUROC mean=0.457 RF=0.509 [0.396-0.621]
+  ETOPOSIDE        n_pat= 86 (75R/11NR) rho=nan  patAUROC mean=0.580 RF=0.630 [0.462-0.790]
+  FLUOROURACIL     n_pat=192 (134R/58NR) rho=0.499  patAUROC mean=0.532 RF=0.507 [0.417-0.599]
+  GEMCITABINE      n_pat=157 (75R/82NR) rho=0.687  patAUROC mean=0.560 RF=0.570 [0.479-0.658]
+  PACLITAXEL       n_pat=164 (116R/48NR) rho=0.39  patAUROC mean=0.564 RF=0.659 [0.569-0.746]
+
+  drugs with a usable TCGA test set: 8
+
+  Spearman(concordance, patient AUROC mean) = +0.400 (p=0.505)
+  drugs with patient AUROC > 0.5 (mean over models): 6/8

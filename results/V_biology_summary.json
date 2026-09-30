@@ -1,0 +1,28 @@
+{
+  "moa": {
+    "targeted": {
+      "n": 22,
+      "median_rho": 0.453,
+      "median_ext": 0.701
+    },
+    "cytotoxic": {
+      "n": 7,
+      "median_rho": 0.591,
+      "median_ext": 0.743
+    },
+    "other": {
+      "n": 28,
+      "median_rho": 0.417,
+      "median_ext": 0.659
+    }
+  },
+  "moa_kruskal_p": 0.5994816263528946,
+  "feature_jaccard_spearman": 0.708,
+  "feature_jaccard_p": 3.6362339714662184e-10,
+  "median_jaccard": 0.212,
+  "biomarker_in_topk": 4,
+  "biomarker_n": 22,
+  "biomarker_rank_spearman": 0.084,
+  "biomarker_rank_p": 0.7096309339357195,
+  "topk": 200
+}

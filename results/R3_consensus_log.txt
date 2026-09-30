@@ -1,0 +1,68 @@
+[00:33:39] loading expression ...
+  expression (1699, 19215)
+  shared drugs 67
+  1035270-39-3         nsh=416 ncons_tr= 95 rho=+0.25 | cons RF S=0.764 C=0.821 D=0.744
+  284461-73-0          nsh=447 ncons_tr= 91 rho=+0.26 | cons RF S=0.863 C=0.895 D=0.807
+  ADAVOSERTIB          nsh=448 ncons_tr=121 rho=+0.50 | cons RF S=0.896 C=0.899 D=0.832
+  AFATINIB             nsh=424 ncons_tr=109 rho=+0.49 | cons RF S=0.902 C=0.896 D=0.872
+  ALISERTIB            nsh=430 ncons_tr=120 rho=+0.49 | cons RF S=0.844 C=0.802 D=0.799
+  ALPELISIB            nsh=337 ncons_tr= 88 rho=+0.47 | cons RF S=0.752 C=0.842 D=0.716
+  APO866               nsh=184 ncons_tr= 61 rho=+0.66 | cons RF S=0.890 C=0.883 D=0.825
+  ASP-7487             nsh=468 ncons_tr=119 rho=+0.45 | cons RF S=0.787 C=0.744 D=0.786
+  AZD 2171             nsh=225 ncons_tr= 44 rho=+0.37 | cons RF S=0.845 C=0.720 D=0.649
+  AZD7762              nsh=461 ncons_tr=135 rho=+0.59 | cons RF S=0.865 C=0.864 D=0.878
+  BEZ235               nsh=338 ncons_tr= 80 rho=+0.39 | cons RF S=0.766 C=0.793 D=0.715
+  BIBR-1532            nsh=446 ncons_tr= 77 rho=+0.07 | cons RF S=0.697 C=0.640 D=0.757
+  BMS 536924           nsh=435 ncons_tr=118 rho=+0.55 | cons RF S=0.598 C=0.687 D=0.664
+  BMS-345541           nsh=421 ncons_tr= 93 rho=+0.33 | cons RF S=0.933 C=0.896 D=0.928
+  BORTEZOMIB           nsh=435 ncons_tr=113 rho=+0.43 | cons RF S=0.640 C=0.733 D=0.652
+  CRA-032765           nsh=312 ncons_tr= 82 rho=+0.46 | cons RF S=0.820 C=0.810 D=0.862
+  CRIZOTINIB           nsh=426 ncons_tr= 75 rho=+0.17 | cons RF S=0.794 C=0.841 D=0.807
+  DABRAFENIB           nsh=226 ncons_tr= 62 rho=+0.52 | cons RF S=0.972 C=0.958 D=0.938
+  DASATINIB            nsh=457 ncons_tr=145 rho=+0.70 | cons RF S=0.895 C=0.892 D=0.890
+  DINACICLIB           nsh=220 ncons_tr= 61 rho=+0.59 | cons RF S=0.933 C=0.933 D=0.906
+  DOCETAXEL            nsh=226 ncons_tr= 66 rho=+0.59 | cons RF S=0.882 C=0.829 D=0.864
+  ELOXATIN             nsh=463 ncons_tr=106 rho=+0.37 | cons RF S=0.971 C=0.996 D=0.980
+  ENTINOSTAT           nsh=431 ncons_tr=124 rho=+0.59 | cons RF S=0.868 C=0.874 D=0.848
+  ERLOTINIB            nsh=445 ncons_tr=103 rho=+0.43 | cons RF S=0.885 C=0.938 D=0.886
+  EXEL-2880            nsh=440 ncons_tr=119 rho=+0.53 | cons RF S=0.779 C=0.843 D=0.786
+  FLUOROURACIL         nsh=469 ncons_tr=120 rho=+0.49 | cons RF S=0.901 C=0.934 D=0.869
+  GEFITINIB            nsh=436 ncons_tr= 79 rho=+0.26 | cons RF S=0.564 C=0.887 D=0.455
+  GEMCITABINE          nsh=414 ncons_tr=135 rho=+0.69 | cons RF S=0.839 C=0.876 D=0.837
+  GX15-070             nsh=440 ncons_tr=111 rho=+0.38 | cons RF S=0.926 C=0.955 D=0.897
+  ICI-46474            nsh=442 ncons_tr= 76 rho=+0.09 | cons RF S=0.405 C=0.357 D=0.628
+  LAPATINIB            nsh=424 ncons_tr=102 rho=+0.43 | cons RF S=0.899 C=0.898 D=0.864
+  M-39831              nsh=445 ncons_tr= 85 rho=+0.14 | cons RF S=0.676 C=0.679 D=0.579
+  MK 2206              nsh=418 ncons_tr=107 rho=+0.50 | cons RF S=0.755 C=0.725 D=0.702
+  MOLIBRESIB           nsh=437 ncons_tr=107 rho=+0.47 | cons RF S=0.813 C=0.750 D=0.781
+  MST 312              nsh=440 ncons_tr=105 rho=+0.48 | cons RF S=0.939 C=0.957 D=0.915
+  NAVITOCLAX           nsh=446 ncons_tr=114 rho=+0.51 | cons RF S=0.849 C=0.866 D=0.780
+  NELARABINE           nsh=398 ncons_tr= 65 rho=+0.10 | cons RF S=0.689 C=0.574 D=0.562
+  NILOTINIB            nsh=439 ncons_tr= 81 rho=+0.09 | cons RF S=0.684 C=0.811 D=0.612
+  NVP ADW742           nsh=438 ncons_tr=105 rho=+0.34 | cons RF S=0.797 C=0.842 D=0.809
+  OLAPARIB             nsh=451 ncons_tr= 83 rho=+0.24 | cons RF S=0.836 C=0.784 D=0.839
+  PACLITAXEL           nsh=441 ncons_tr=109 rho=+0.39 | cons RF S=0.795 C=0.857 D=0.831
+  PEVONEDISTAT         nsh=429 ncons_tr=129 rho=+0.63 | cons RF S=0.924 C=0.923 D=0.937
+  PICTILISIB           nsh=464 ncons_tr=120 rho=+0.46 | cons RF S=0.731 C=0.723 D=0.587
+  PLX 4720             nsh=460 ncons_tr=105 rho=+0.37 | cons RF S=0.684 C=0.706 D=0.660
+  RAPAMYCIN            nsh=446 ncons_tr=101 rho=+0.32 | cons RF S=0.820 C=0.794 D=0.709
+  REBEMADLIN           nsh=452 ncons_tr=125 rho=+0.51 | cons RF S=0.872 C=0.941 D=0.826
+  RUXOLITINIB          nsh=432 ncons_tr= 87 rho=+0.23 | cons RF S=0.820 C=0.877 D=0.884
+  SEPANTRONIUM BROMIDE nsh=403 ncons_tr=125 rho=+0.67 | cons RF S=0.867 C=0.818 D=0.743
+  TENIPOSIDE           nsh=219 ncons_tr= 64 rho=+0.65 | cons RF S=0.888 C=0.904 D=0.924
+  TOPOTECAN            nsh=442 ncons_tr=132 rho=+0.61 | cons RF S=0.923 C=0.942 D=0.918
+  TRAMETINIB           nsh=231 ncons_tr= 79 rho=+0.76 | cons RF S=0.892 C=0.875 D=0.942
+  VENETOCLAX           nsh=284 ncons_tr= 50 rho=+0.17 | cons RF S=0.869 C=0.783 D=0.711
+  VINCRISTINE          nsh=446 ncons_tr=139 rho=+0.65 | cons RF S=0.914 C=0.902 D=0.898
+  VORINOSTAT           nsh=437 ncons_tr=131 rho=+0.62 | cons RF S=0.948 C=0.946 D=0.960
+  YK 4-279             nsh=452 ncons_tr=132 rho=+0.57 | cons RF S=0.927 C=0.945 D=0.936
+
+[00:35:00] drugs analysed for consensus: 55
+
+=== R3 consensus denoising: median AUROC by scheme x target ===
+  Random Forest        target=cons   n=55  S=0.849 C=0.864 D=0.826  ΔC-S=+0.26pts [-0.56,+1.85]  ΔC-Sdown=+2.68pts  frac(C>S)=0.51  p=0.312
+  Random Forest        target=gdsc2  n=55  S=0.775 C=0.787 D=0.733  ΔC-S=+0.60pts [+0.00,+2.39]  ΔC-Sdown=+2.22pts  frac(C>S)=0.62  p=0.0992
+  Random Forest        target=ctrp   n=55  S=0.776 C=0.780 D=0.748  ΔC-S=-0.22pts [-1.58,+1.00]  ΔC-Sdown=+1.88pts  frac(C>S)=0.45  p=0.412
+  Logistic Regression  target=cons   n=55  S=0.775 C=0.853 D=0.794  ΔC-S=+5.93pts [+2.36,+7.67]  ΔC-Sdown=+4.76pts  frac(C>S)=0.87  p=9.62e-08
+  Logistic Regression  target=gdsc2  n=55  S=0.704 C=0.760 D=0.717  ΔC-S=+3.56pts [+2.67,+5.88]  ΔC-Sdown=+3.54pts  frac(C>S)=0.76  p=1.39e-06
+  Logistic Regression  target=ctrp   n=55  S=0.692 C=0.761 D=0.688  ΔC-S=+2.56pts [+1.22,+6.62]  ΔC-Sdown=+3.59pts  frac(C>S)=0.78  p=2.7e-05

@@ -1,0 +1,10 @@
+{
+  "threshold": 0.7,
+  "insample_roc_auc": 0.907,
+  "lodo_roc_auc": 0.88,
+  "lodo_pr_auc": 0.891,
+  "base_rate": 0.492,
+  "lodo_regression_r2": 0.63,
+  "lodo_regression_rmse_pts": 6.8,
+  "n_drugs": 59
+}

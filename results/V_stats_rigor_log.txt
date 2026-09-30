@@ -1,0 +1,10 @@
+observed Spearman(concordance, external AUROC) = 0.808 (n=59)
+[perm] permutation p (|null| >= |obs|, 20000 shuffles) = 5.00e-05; null mean=0.000 sd=0.131
+[boot] bootstrap 95% CI on Spearman = [0.678, 0.891]
+
+[alt] concordance metric -> external AUROC (n=59):
+    spearman    : Spearman with external AUROC = +0.808 (p=1.0e-14)
+    pearson_z   : Spearman with external AUROC = +0.642 (p=4.3e-08)
+    kendall     : Spearman with external AUROC = +0.804 (p=1.8e-14)
+
+[partial] Spearman(concordance, external | n, lineage_entropy, internal_difficulty) = +0.590 (p=8.6e-07, n=59)

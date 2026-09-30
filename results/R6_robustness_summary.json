@@ -1,0 +1,32 @@
+{
+  "bidirectional": {
+    "Logistic Regression": {
+      "spearman_rho_ext": 0.855,
+      "spearman_p": 1.3199508201546107e-17,
+      "median_internal": 0.669,
+      "median_external": 0.684,
+      "median_drop_pts": 2.1
+    },
+    "Random Forest": {
+      "spearman_rho_ext": 0.764,
+      "spearman_p": 2.8867500107326196e-12,
+      "median_internal": 0.746,
+      "median_external": 0.73,
+      "median_drop_pts": 1.4
+    },
+    "SVM (RBF)": {
+      "spearman_rho_ext": 0.819,
+      "spearman_p": 3.941662624628615e-15,
+      "median_internal": 0.738,
+      "median_external": 0.723,
+      "median_drop_pts": 1.7
+    }
+  },
+  "regression": {
+    "n_drugs": 60,
+    "median_int_spearman": 0.434,
+    "median_ext_spearman": 0.342,
+    "spearman_rho_vs_ext": 0.828,
+    "spearman_p": 3.153440832712739e-16
+  }
+}

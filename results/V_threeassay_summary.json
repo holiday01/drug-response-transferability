@@ -1,0 +1,54 @@
+{
+  "seed": 42,
+  "pairs": {
+    "CTRP->GDSC2": {
+      "n": 60,
+      "spearman": 0.813,
+      "p": 3.1765344335983586e-15,
+      "median_ext": 0.693,
+      "median_rho": 0.454
+    },
+    "CTRP->PRISM": {
+      "n": 114,
+      "spearman": 0.654,
+      "p": 3.2264978644370482e-15,
+      "median_ext": 0.585,
+      "median_rho": 0.222
+    },
+    "GDSC2->PRISM": {
+      "n": 45,
+      "spearman": 0.604,
+      "p": 1.1101324744734034e-05,
+      "median_ext": 0.625,
+      "median_rho": 0.302
+    },
+    "GDSC2->CTRP": {
+      "n": 59,
+      "spearman": 0.772,
+      "p": 8.543300219305508e-13,
+      "median_ext": 0.73,
+      "median_rho": 0.459
+    },
+    "PRISM->CTRP": {
+      "n": 116,
+      "spearman": 0.698,
+      "p": 2.888370691974976e-18,
+      "median_ext": 0.659,
+      "median_rho": 0.218
+    },
+    "PRISM->GDSC2": {
+      "n": 45,
+      "spearman": 0.739,
+      "p": 6.971845064401773e-09,
+      "median_ext": 0.674,
+      "median_rho": 0.302
+    }
+  },
+  "pooled_spearman": 0.732,
+  "pooled_p": 7.796754831481775e-75,
+  "pooled_n": 439,
+  "loo_spearman": 0.444,
+  "loo_p": 5.929338401972902e-06,
+  "loo_n": 96,
+  "generated": "2026-07-11 02:17:09"
+}

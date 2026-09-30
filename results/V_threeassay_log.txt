@@ -1,0 +1,36 @@
+[02:14:01] loading CCLE expression ...
+  CCLE (1699, 19215)
+[02:14:06] loading assays ...
+  CTRP: 840 cell lines x 496 drugs
+  GDSC2: 789 cell lines x 169 drugs
+  PRISM: 737 cell lines x 1488 drugs
+
+[02:14:09] CTRP->GDSC2: 67 shared drugs
+  usable drugs: 60
+
+[02:14:35] CTRP->PRISM: 116 shared drugs
+  usable drugs: 114
+
+[02:15:24] GDSC2->PRISM: 48 shared drugs
+  usable drugs: 45
+
+[02:15:42] GDSC2->CTRP: 67 shared drugs
+  usable drugs: 59
+
+[02:16:06] PRISM->CTRP: 116 shared drugs
+  usable drugs: 116
+
+[02:16:52] PRISM->GDSC2: 48 shared drugs
+  usable drugs: 45
+
+[02:17:09] === per-pair: concordance -> external AUROC (RF) ===
+  CTRP->GDSC2      n=60  Spearman(rho,ext)=+0.813 (p=3.2e-15)  median ext=0.693
+  CTRP->PRISM      n=114  Spearman(rho,ext)=+0.654 (p=3.2e-15)  median ext=0.585
+  GDSC2->PRISM     n=45  Spearman(rho,ext)=+0.604 (p=1.1e-05)  median ext=0.625
+  GDSC2->CTRP      n=59  Spearman(rho,ext)=+0.772 (p=8.5e-13)  median ext=0.730
+  PRISM->CTRP      n=116  Spearman(rho,ext)=+0.698 (p=2.9e-18)  median ext=0.659
+  PRISM->GDSC2     n=45  Spearman(rho,ext)=+0.739 (p=7.0e-09)  median ext=0.674
+  POOLED (all pairs, n=439)  Spearman=+0.732 (p=7.8e-75)
+
+[02:17:09] === leave-one-assay-out (drug-intrinsic reproducibility) ===
+  n=96  Spearman(reproducibility of other pairs, transfer INTO held-out assay) = +0.444 (p=5.9e-06)

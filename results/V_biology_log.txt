@@ -1,0 +1,37 @@
+loading expression ...
+
+=== MOA class vs concordance / transfer ===
+  targeted    n=22  median rho=0.453  median ext AUROC=0.701
+  cytotoxic   n= 7  median rho=0.591  median ext AUROC=0.743
+  other       n=28  median rho=0.417  median ext AUROC=0.659
+  Kruskal-Wallis (concordance across MOA classes): H=1.02, p=5.99e-01
+
+=== cross-assay feature overlap (Jaccard of top-200 genes) vs concordance ===
+  n=59  Spearman(concordance, feature Jaccard) = +0.708 (p=3.6e-10); median Jaccard=0.212
+
+=== known-biomarker recovery (rank of target gene; lower=better) ===
+  drugs with a curated biomarker: 22
+  target gene in top-200 features: 4/22 drugs
+  Spearman(concordance, biomarker rank) = +0.084 (p=7.10e-01)  (negative = concordant drugs rank their target higher)
+    TRAMETINIB       rho=+0.75  MAP2K1;BRAF;NRAS     best rank=3475
+    DASATINIB        rho=+0.70  ABL1;SRC;KIT         best rank=5196
+    VINCRISTINE      rho=+0.65  TUBB                 best rank=7736
+    DOCETAXEL        rho=+0.59  TUBB                 best rank=10645
+    DABRAFENIB       rho=+0.52  BRAF                 best rank=840
+    NAVITOCLAX       rho=+0.51  BCL2;BCL2L1          best rank=21
+    MK 2206          rho=+0.50  AKT1;AKT2            best rank=1548
+    AFATINIB         rho=+0.49  EGFR;ERBB2           best rank=2641
+    ALPELISIB        rho=+0.47  PIK3CA               best rank=15976
+    PICTILISIB       rho=+0.46  PIK3CA               best rank=17075
+    LAPATINIB        rho=+0.42  ERBB2;EGFR           best rank=12116
+    ERLOTINIB        rho=+0.42  EGFR                 best rank=3084
+    PACLITAXEL       rho=+0.39  TUBB                 best rank=11606
+    BEZ235           rho=+0.39  PIK3CA;MTOR          best rank=11145
+    PLX 4720         rho=+0.37  BRAF                 best rank=15708
+    RAPAMYCIN        rho=+0.32  MTOR                 best rank=9130
+    GEFITINIB        rho=+0.25  EGFR                 best rank=12016
+    OLAPARIB         rho=+0.25  BRCA1;BRCA2;PARP1    best rank=36
+    RUXOLITINIB      rho=+0.23  JAK1;JAK2            best rank=2112
+    VENETOCLAX       rho=+0.20  BCL2                 best rank=1
+    CRIZOTINIB       rho=+0.17  ALK;MET;ROS1         best rank=157
+    NILOTINIB        rho=+0.09  ABL1;KIT             best rank=6915

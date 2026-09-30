@@ -1,0 +1,84 @@
+[22:47:24] loading CCLE expression ...
+  expression: 1699 cell lines x 19215 genes
+[22:47:28] loading GDSC2 replicate-level dose ...
+  GDSC2: 789 cell lines x 30254 dose/replicate columns
+  GDSC2 drugs summarised (mean viability over doses): 169
+  GDSC2 metric range approx [0.333, 1]
+[22:47:30] CTRP∩GDSC2 shared drug names: 67
+
+[22:47:30] === per-drug internal (CTRP held-out) vs external (GDSC2) ===
+  (+)-JQ-1               n_ctrp=522 n_ext=  0 rho=0.709  RF int=0.8634 ext=None  (no external: too few GDSC2 extremes)
+  1035270-39-3           n_ctrp=469 n_ext=255 rho=0.247  RF int=0.7758 ext=0.4964
+  284461-73-0            n_ctrp=517 n_ext=242 rho=0.237  RF int=0.7537 ext=0.7743
+  A-1065-5               n_ctrp=529 n_ext= 98 rho=0.045  RF int=0.6953 ext=0.4579
+  ADAVOSERTIB            n_ctrp=506 n_ext=247 rho=0.509  RF int=0.8661 ext=0.8562
+  AFATINIB               n_ctrp=465 n_ext=270 rho=0.488  RF int=0.8294 ext=0.7505
+  AG-13736               n_ctrp=513 n_ext=  0 rho=0.502  RF int=0.8169 ext=None  (no external: too few GDSC2 extremes)
+  AK-55409               n_ctrp=526 n_ext=  0 rho=0.522  RF int=0.6863 ext=None  (no external: too few GDSC2 extremes)
+  ALISERTIB              n_ctrp=518 n_ext=227 rho=0.493  RF int=0.8612 ext=0.8133
+  ALPELISIB              n_ctrp=364 n_ext=282 rho=0.468  RF int=0.6592 ext=0.6887
+  APO866                 n_ctrp=448 n_ext=117 rho=0.667  RF int=0.8235 ext=0.8769
+  ASP-7487               n_ctrp=517 n_ext=240 rho=0.449  RF int=0.7566 ext=0.717
+  AZD 2171               n_ctrp=261 n_ext=314 rho=0.373  RF int=0.6737 ext=0.6299
+  AZD-8055               n_ctrp=531 n_ext= 40 rho=0.232  RF int=0.711 ext=0.4821
+  AZD7762                n_ctrp=527 n_ext=240 rho=0.593  RF int=0.7247 ext=0.7447
+  BEZ235                 n_ctrp=383 n_ext=269 rho=0.385  RF int=0.7639 ext=0.6014
+  BI-2536                n_ctrp=529 n_ext=  0 rho=0.605  RF int=0.8977 ext=None  (no external: too few GDSC2 extremes)
+  BIBR-1532              n_ctrp=514 n_ext=246 rho=0.067  RF int=0.6295 ext=0.5112
+  BIRB 796               n_ctrp=474 n_ext=  0 rho=-0.032  RF int=0.6557 ext=None  (no external: too few GDSC2 extremes)
+  BMS 536924             n_ctrp=509 n_ext=229 rho=0.554  RF int=0.6676 ext=0.6207
+  BMS-345541             n_ctrp=508 n_ext=236 rho=0.328  RF int=0.8282 ext=0.6448
+  BMS-754807             n_ctrp=522 n_ext=  0 rho=0.479  RF int=0.7558 ext=None  (no external: too few GDSC2 extremes)
+  BORTEZOMIB             n_ctrp=509 n_ext=258 rho=0.437  RF int=0.7061 ext=0.6192
+  CRA-032765             n_ctrp=366 n_ext=267 rho=0.464  RF int=0.747 ext=0.723
+  CRIZOTINIB             n_ctrp=511 n_ext=236 rho=0.172  RF int=0.7912 ext=0.5477
+  CYCLOPHOSPHAMIDE       n_ctrp=276 n_ext=306 rho=-0.042  RF int=0.5627 ext=0.5088
+  DABRAFENIB             n_ctrp=258 n_ext=309 rho=0.516  RF int=0.772 ext=0.7441
+  DASATINIB              n_ctrp=519 n_ext=231 rho=0.696  RF int=0.8746 ext=0.8509
+  DINACICLIB             n_ctrp=264 n_ext=300 rho=0.59  RF int=0.9528 ext=0.8237
+  DOCETAXEL              n_ctrp=248 n_ext=321 rho=0.591  RF int=0.8218 ext=0.743
+  ELOXATIN               n_ctrp=514 n_ext=259 rho=0.372  RF int=0.7806 ext=0.8028
+  ENTINOSTAT             n_ctrp=509 n_ext=242 rho=0.599  RF int=0.8334 ext=0.8363
+  ERLOTINIB              n_ctrp=519 n_ext=249 rho=0.422  RF int=0.8133 ext=0.6678
+  EXEL-2880              n_ctrp=508 n_ext=252 rho=0.533  RF int=0.674 ext=0.6835
+  FLUOROURACIL           n_ctrp=521 n_ext=262 rho=0.499  RF int=0.7941 ext=0.691
+  GEFITINIB              n_ctrp=509 n_ext=247 rho=0.254  RF int=0.6803 ext=0.6123
+  GEMCITABINE            n_ctrp=475 n_ext=265 rho=0.687  RF int=0.8662 ext=0.7482
+  GX15-070               n_ctrp=526 n_ext=234 rho=0.371  RF int=0.8002 ext=0.6173
+  ICI-46474              n_ctrp=511 n_ext=244 rho=0.092  RF int=0.5906 ext=0.5119
+  KU-55933               n_ctrp=510 n_ext=  0 rho=0.355  RF int=0.621 ext=None  (no external: too few GDSC2 extremes)
+  LAPATINIB              n_ctrp=487 n_ext=258 rho=0.422  RF int=0.801 ext=0.7136
+  M-39831                n_ctrp=522 n_ext=246 rho=0.129  RF int=0.5297 ext=0.5492
+  MIRA 1                 n_ctrp=367 n_ext=279 rho=0.039  RF int=0.6958 ext=0.6216
+  MK 2206                n_ctrp=481 n_ext=252 rho=0.498  RF int=0.6987 ext=0.7224
+  MOLIBRESIB             n_ctrp=525 n_ext=226 rho=0.469  RF int=0.7829 ext=0.6336
+  MST 312                n_ctrp=517 n_ext=247 rho=0.489  RF int=0.7768 ext=0.8355
+  NAVITOCLAX             n_ctrp=520 n_ext=234 rho=0.512  RF int=0.7472 ext=0.7397
+  NELARABINE             n_ctrp=478 n_ext=253 rho=0.099  RF int=0.5443 ext=0.5561
+  NILOTINIB              n_ctrp=514 n_ext=235 rho=0.093  RF int=0.5063 ext=0.6348
+  NVP ADW742             n_ctrp=508 n_ext=234 rho=0.333  RF int=0.7158 ext=0.7255
+  OLAPARIB               n_ctrp=523 n_ext=251 rho=0.247  RF int=0.7896 ext=0.5734
+  PACLITAXEL             n_ctrp=511 n_ext=243 rho=0.39  RF int=0.8287 ext=0.6961
+  PEVONEDISTAT           n_ctrp=497 n_ext=241 rho=0.639  RF int=0.8677 ext=0.7933
+  PICTILISIB             n_ctrp=530 n_ext=233 rho=0.459  RF int=0.7699 ext=0.5809
+  PLX 4720               n_ctrp=508 n_ext=262 rho=0.37  RF int=0.5783 ext=0.5747
+  RAPAMYCIN              n_ctrp=525 n_ext=231 rho=0.317  RF int=0.7341 ext=0.58
+  REBEMADLIN             n_ctrp=507 n_ext=247 rho=0.503  RF int=0.8013 ext=0.7753
+  RUXOLITINIB            n_ctrp=517 n_ext=229 rho=0.234  RF int=0.8195 ext=0.5693
+  SEPANTRONIUM BROMIDE   n_ctrp=471 n_ext=249 rho=0.662  RF int=0.8547 ext=0.7944
+  TENIPOSIDE             n_ctrp=269 n_ext=290 rho=0.652  RF int=0.8091 ext=0.7594
+  TOPOTECAN              n_ctrp=528 n_ext=219 rho=0.617  RF int=0.8667 ext=0.7605
+  TRAMETINIB             n_ctrp=261 n_ext=313 rho=0.754  RF int=0.9176 ext=0.8846
+  VENETOCLAX             n_ctrp=317 n_ext=302 rho=0.203  RF int=0.6122 ext=0.6506
+  VINCRISTINE            n_ctrp=533 n_ext=223 rho=0.653  RF int=0.8607 ext=0.8173
+  VORINOSTAT             n_ctrp=510 n_ext=241 rho=0.628  RF int=0.8348 ext=0.8213
+  YK 4-279               n_ctrp=520 n_ext=230 rho=0.577  RF int=0.8156 ext=0.7837
+
+  drugs with a valid external set: 59 / 66
+
+[22:48:31] === TABLE: internal vs external by model (median over 59 shared drugs) ===
+  Logistic Regression    internal=0.710  external=0.634  drop=+4.1 pts [3.3-6.7]
+  Random Forest          internal=0.777  external=0.696  drop=+5.0 pts [2.8-7.9]
+  XGBoost                internal=0.779  external=0.713  drop=+5.7 pts [2.8-6.8]
+  SVM (RBF)              internal=0.784  external=0.719  drop=+4.6 pts [2.6-7.0]
+  DNN (MLP)              internal=0.767  external=0.686  drop=+5.8 pts [2.8-9.1]

@@ -1,0 +1,60 @@
+drug,rho,ext_RF,moa,moa_class,feature_jaccard,biomarker_genes,biomarker_rank
+1035270-39-3,0.247,0.4964,,other,0.0025,,
+284461-73-0,0.237,0.7743,,other,0.2121,,
+A-1065-5,0.045,0.4579,,other,0.0,,
+ADAVOSERTIB,0.509,0.8562,,other,0.4134,,
+AFATINIB,0.488,0.7505,EGFR inhibitor,targeted,0.2346,EGFR;ERBB2,2641.0
+ALISERTIB,0.493,0.8133,Aurora kinase inhibitor,targeted,0.3652,,
+ALPELISIB,0.468,0.6887,PI3K inhibitor,targeted,0.2012,PIK3CA,15976.0
+APO866,0.667,0.8769,,other,0.2862,,
+ASP-7487,0.449,0.717,,other,0.2384,,
+AZD 2171,0.373,0.6299,,other,0.0724,,
+AZD-8055,0.232,0.4821,,other,0.0025,,
+AZD7762,0.593,0.7447,CHK inhibitor,targeted,0.3333,,
+BEZ235,0.385,0.6014,,other,0.0256,PIK3CA;MTOR,11145.0
+BIBR-1532,0.067,0.5112,telomerase inhibitor,targeted,0.0025,,
+BMS 536924,0.554,0.6207,,other,0.084,,
+BMS-345541,0.328,0.6448,IKK inhibitor,targeted,0.2308,,
+BORTEZOMIB,0.437,0.6192,"NFkB pathway inhibitor, proteasome inhibitor",targeted,0.2048,,
+CRA-032765,0.464,0.723,,other,0.1236,,
+CRIZOTINIB,0.172,0.5477,ALK tyrosine kinase receptor inhibitor,targeted,0.005,ALK;MET;ROS1,157.0
+CYCLOPHOSPHAMIDE,-0.042,0.5088,DNA alkylating agent,cytotoxic,0.0025,,
+DABRAFENIB,0.516,0.7441,RAF inhibitor,targeted,0.1111,BRAF,840.0
+DASATINIB,0.696,0.8509,"Bcr-Abl kinase inhibitor, ephrin inhibitor, KIT inhibitor, PDGFR tyrosine kinase receptor inhibitor, src inhibitor, tyrosine kinase inhibitor",targeted,0.2422,ABL1;SRC;KIT,5196.0
+DINACICLIB,0.59,0.8237,CDK inhibitor,targeted,0.3841,,
+DOCETAXEL,0.591,0.743,tubulin polymerization inhibitor,cytotoxic,0.3605,TUBB,10645.0
+ELOXATIN,0.372,0.8028,,other,0.4134,,
+ENTINOSTAT,0.599,0.8363,HDAC inhibitor,epigenetic,0.5094,,
+ERLOTINIB,0.422,0.6678,EGFR inhibitor,targeted,0.2658,EGFR,3084.0
+EXEL-2880,0.533,0.6835,,other,0.1799,,
+FLUOROURACIL,0.499,0.691,,other,0.2121,,
+GEFITINIB,0.254,0.6123,EGFR inhibitor,targeted,0.1142,EGFR,12016.0
+GEMCITABINE,0.687,0.7482,ribonucleotide reductase inhibitor,targeted,0.3559,,
+GX15-070,0.371,0.6173,,other,0.1396,,
+ICI-46474,0.092,0.5119,,other,0.005,,
+LAPATINIB,0.422,0.7136,EGFR inhibitor,targeted,0.227,ERBB2;EGFR,12116.0
+M-39831,0.129,0.5492,,other,0.0283,,
+MIRA 1,0.039,0.6216,,other,0.0989,,
+MK 2206,0.498,0.7224,,other,0.2821,AKT1;AKT2,1548.0
+MOLIBRESIB,0.469,0.6336,,other,0.2232,,
+MST 312,0.489,0.8355,,other,0.3652,,
+NAVITOCLAX,0.512,0.7397,BCL inhibitor,targeted,0.1594,BCL2;BCL2L1,21.0
+NELARABINE,0.099,0.5561,"DNA synthesis inhibitor, T cell inhibitor",cytotoxic,0.0152,,
+NILOTINIB,0.093,0.6348,"Abl kinase inhibitor, Bcr-Abl kinase inhibitor",targeted,0.0582,ABL1;KIT,6915.0
+NVP ADW742,0.333,0.7255,,other,0.2121,,
+OLAPARIB,0.247,0.5734,PARP inhibitor,targeted,0.0363,BRCA1;BRCA2;PARP1,36.0
+PACLITAXEL,0.39,0.6961,tubulin polymerization inhibitor,cytotoxic,0.278,TUBB,11606.0
+PEVONEDISTAT,0.639,0.7933,nedd activating enzyme inhibitor,targeted,0.3605,,
+PICTILISIB,0.459,0.5809,,other,0.0283,PIK3CA,17075.0
+PLX 4720,0.37,0.5747,,other,0.0929,BRAF,15708.0
+RAPAMYCIN,0.317,0.58,,other,0.0417,MTOR,9130.0
+REBEMADLIN,0.503,0.7753,,other,0.1561,,
+RUXOLITINIB,0.234,0.5693,JAK inhibitor,targeted,0.1461,JAK1;JAK2,2112.0
+SEPANTRONIUM BROMIDE,0.662,0.7944,,other,0.173,,
+TENIPOSIDE,0.652,0.7594,topoisomerase inhibitor,cytotoxic,0.3605,,
+TOPOTECAN,0.617,0.7605,topoisomerase inhibitor,cytotoxic,0.3333,,
+TRAMETINIB,0.754,0.8846,MEK inhibitor,targeted,0.2195,MAP2K1;BRAF;NRAS,3475.0
+VENETOCLAX,0.203,0.6506,BCL inhibitor,targeted,0.2232,BCL2,1.0
+VINCRISTINE,0.653,0.8173,tubulin polymerization inhibitor,cytotoxic,0.5038,TUBB,7736.0
+VORINOSTAT,0.628,0.8213,HDAC inhibitor,epigenetic,0.581,,
+YK 4-279,0.577,0.7837,,other,0.4815,,
