@@ -94,6 +94,8 @@ checks = [
     ("RF vs G", f1(rf3["C_minus_G"]["median_pts"]), "-1.9"),
     ("RF vs G worse", str(rf3["C_minus_G"]["n_drugs_C_worse"]), "55"),
     ("RF vs A", f1(rf3["C_minus_A"]["median_pts"]), "-1.0"),
+    ("wilcoxon LR C-A", f"{lr3['C_minus_A']['wilcoxon_p']:.3f}", "0.013"),
+    ("wilcoxon LR prism C-A", f"{lrp['C_minus_A']['wilcoxon_p']:.2f}", "0.83"),
     ("n cons drugs", str(lr3["C_minus_S"]["n_drugs"]), "65"),
 ]
 bad = 0

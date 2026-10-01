@@ -116,7 +116,7 @@ the train-only feature selection are in `rev_common.py`.
 | `make_figures_rev.py` | Main figures 1, 2, 3 (file `fig5_robustness`) and 4 (PDF, 300-dpi PNG, 600-dpi TIFF) | `outputs/figures/`, `outputs/figures_tiff/` |
 | `make_fig6_rev.py` | Main figure 6 (patient tumors) | `outputs/figures/`, `outputs/figures_tiff/` |
 | `make_supp_figures_rev.py` | Supplementary figures S1, S2, S9 | `outputs/supp_figures/` |
-| `verify_numbers_rev.py` | Recomputes 67 headline numbers of the paper from the `rev*` results and compares them with the reported values | console report |
+| `verify_numbers_rev.py` | Recomputes 69 headline numbers of the paper from the `rev*` results and compares them with the reported values | console report |
 
 **Supporting analyses (original single-split design).**
 
@@ -152,7 +152,7 @@ The figure and verification scripts need only the files in `results/`, so they r
 without downloading any input data:
 
 ```bash
-python scripts/verify_numbers_rev.py   # 67/67 checks
+python scripts/verify_numbers_rev.py   # 69/69 checks
 python scripts/make_figures_rev.py
 ```
 
