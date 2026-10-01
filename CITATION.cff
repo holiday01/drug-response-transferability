@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "drug-response-transferability: analysis code and results for cross-assay concordance and the transferability of drug-response models"
+type: software
+authors:
+  - family-names: Chiu
+    given-names: Yen-Jung
+    affiliation: "Department of Biomedical Engineering, Chang Gung University"
+    orcid: "https://orcid.org/0000-0002-2087-2266"
+license: MIT
+repository-code: "https://github.com/holiday01/drug-response-transferability"
+version: "1.0.0"
+date-released: "2026-10-01"

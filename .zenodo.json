@@ -1,0 +1,15 @@
+{
+  "title": "drug-response-transferability: analysis code and results for cross-assay concordance and the transferability of drug-response models",
+  "upload_type": "software",
+  "description": "Python code, result tables and split identifiers for a study of whether the agreement between two drug-sensitivity assays (CTRP, GDSC2, PRISM) on shared cancer cell lines predicts how well expression-based drug-response models transfer between assays. Input data are public and are not redistributed; the README lists their sources and versions.",
+  "creators": [
+    {
+      "name": "Chiu, Yen-Jung",
+      "affiliation": "Department of Biomedical Engineering, Chang Gung University",
+      "orcid": "0000-0002-2087-2266"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": ["drug-response prediction", "pharmacogenomics", "cross-assay concordance", "CTRP", "GDSC", "PRISM", "transferability"]
+}
