@@ -52,7 +52,7 @@ for pr in PAIRCOL:
     ax[0].scatter(s.rho, s.ext, s=20, color=PAIRCOL[pr], edgecolor="none", alpha=0.7, label=pr.replace("->", "$\\to$"))
 s = tp.dropna(subset=["rho", "ext"]); fit(ax[0], s.rho.values, s.ext.values)
 ax[0].axhline(0.5, color=GREY, ls=":", lw=0.8); ax[0].set_xlabel("Cross-assay concordance $\\rho$"); ax[0].set_ylabel("External AUROC")
-ax[0].set_title("A", loc="left", fontweight="bold"); ax[0].legend(fontsize=6.6, ncol=2, loc="lower right", framealpha=.9)
+ax[0].set_title("A", loc="left", fontweight="bold"); ax[0].legend(fontsize=8, ncol=2, loc="lower right", framealpha=.9, handletextpad=0.2, columnspacing=0.6)
 ax[0].text(0.04, 0.95, f"pooled $\\rho_s$={stats.spearmanr(s.rho, s.ext).statistic:.2f}\nn={len(s)}", transform=ax[0].transAxes,
            fontsize=8.5, va="top", bbox=dict(boxstyle="round", fc="white", ec=GREY))
 lo = pd.read_csv(f"{R}/rev2_three_assay/loo_logistic.csv")
@@ -63,7 +63,7 @@ for H, c in HCOL.items():
                   label=f"{H} held out ($\\rho_s$={S2[H]['spearman']:.2f})")
 ax[1].axhline(0.5, color=GREY, ls=":", lw=0.8); ax[1].set_ylim(0.35, 1.05)
 ax[1].set_xlabel("Concordance of the other two assays"); ax[1].set_ylabel("Transfer into held-out assay")
-ax[1].set_title("B", loc="left", fontweight="bold"); ax[1].legend(fontsize=7, loc="upper left", framealpha=.9)
+ax[1].set_title("B", loc="left", fontweight="bold"); ax[1].legend(fontsize=8.5, loc="upper left", framealpha=.9)
 save(fig, "figS2_pooled_loo")
 
 # ============ S9: per-drug internal vs external, five models (reference/test design)

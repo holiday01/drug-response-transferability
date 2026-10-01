@@ -1,0 +1,15 @@
+{
+  "seed": 42,
+  "permutations": 5000,
+  "unit": "drug (3 held-out rows kept together)",
+  "Random Forest": {
+    "n_drugs": 33,
+    "pooled_spearman": 0.443,
+    "block_permutation_p": 0.005598880223955209
+  },
+  "Logistic Regression": {
+    "n_drugs": 33,
+    "pooled_spearman": 0.504,
+    "block_permutation_p": 0.0007998400319936012
+  }
+}

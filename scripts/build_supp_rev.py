@@ -63,6 +63,9 @@ idm=pd.read_csv(f"{R}/rev1_independent/drug_id_map.csv").set_index("drug")
 agr=pd.read_csv(f"{R}/rev1_independent/summary_agreement.csv").set_index("drug")
 S1=json.load(open(f"{R}/rev1_independent/summary.json")); EX=json.load(open(f"{R}/rev1_independent/extra_summary.json"))
 S2=json.load(open(f"{R}/rev2_three_assay/summary.json"))
+BP=json.load(open(f"{R}/rev2_three_assay/block_permutation.json"))
+RS=json.load(open(f"{R}/rev1b_refsize_single/summary.json"))
+NV=json.load(open(f"{R}/rev3_consensus/min_splits_sensitivity.json"))["valid_splits_gdsc2"]
 r3=pd.read_csv(f"{R}/rev3_consensus/per_drug_split.csv")
 agg={"conc":("conc_fitted","mean"),"n_ref":("n_ref_fitted","median"),"n_ext":("n_ext_fitted","median"),"leaky":("conc_fitted_leaky_allshared","mean")}
 for m in MODELS: agg[f"int_{m}"]=(f"int_{m}","mean"); agg[f"ext_{m}"]=(f"ext_fitted_{m}","mean")
@@ -86,9 +89,9 @@ SIII=longtable(["Drug","$\\rho$","CTRP dyn.\\ range","GDSC2 dyn.\\ range","Linea
   "\\textbf{Table S3. Per-drug determinant features:} concordance, dynamic range (s.d.) of the CTRP and GDSC2 sensitivity distributions, and Shannon entropy of the lineages of sensitive cell lines."+ORIG+"")
 def g(r,c): return f"{r[c]:.3f}" if pd.notna(r[c]) else "--"
 c3=r3.groupby("drug").mean(numeric_only=True).sort_values("n_train_C",ascending=False)
-SIV=longtable(["Drug","$n$ cons.","LR S","LR G","LR A","LR C","RF S","RF G","RF A","RF C"],"lccccccccc",
-  [[esc(d),f"{r.n_train_C:.0f}"]+[g(r,f"{k}|{m}|gdsc2") for m in ["Logistic Regression","Random Forest"] for k in "SGAC"] for d,r in c3.iterrows()],
-  "\\textbf{Table S4. Per-drug label-combination results} on the GDSC2 target of held-out cell lines (mean AUROC over ten splits; thresholds from training cell lines). S, CTRP labels only; G, GDSC2 labels only; A, averaged percentile-rank labels; C, consensus cell lines only; $n$ cons., mean number of consensus training cell lines. Size-matched, extreme-only and PRISM-target results are in the released result files.",fontsize="\\footnotesize",tabcolsep="3pt")
+SIV=longtable(["Drug","Splits","$n$ cons.","LR S","LR G","LR A","LR C","RF S","RF G","RF A","RF C"],"lcccccccccc",
+  [[esc(d),str(NV.get(d,0)),f"{r.n_train_C:.0f}"]+[g(r,f"{k}|{m}|gdsc2") for m in ["Logistic Regression","Random Forest"] for k in "SGAC"] for d,r in c3.iterrows()],
+  "\\textbf{Table S4. Per-drug label-combination results} on the GDSC2 target of held-out cell lines (mean AUROC over ten splits; thresholds from training cell lines). S, CTRP labels only; G, GDSC2 labels only; A, averaged percentile-rank labels; C, consensus cell lines only; Splits, number of valid splits of ten attempted (GDSC2 target); $n$ cons., mean number of consensus training cell lines. Size-matched, extreme-only and PRISM-target results are in the released result files.",fontsize="\\footnotesize",tabcolsep="3pt")
 BM=["Logistic Regression","Random Forest","SVM (RBF)"]; BSH={"Logistic Regression":"LR","Random Forest":"RF","SVM (RBF)":"SVM"}
 SV=longtable(["Drug","$\\rho$"]+[f"{BSH[m]} {k}" for m in BM for k in ("int","ext")],"lc"+"c"*6,
   [[esc(r["drug"]),f"{float(r['rho']):.3f}" if pd.notna(r['rho']) else "--"]+
@@ -110,9 +113,9 @@ pr_rows.append(["Pooled (all six pairs)",str(EX["three_assay_pooled"]["n"]),f"{E
 for mod in ["Random Forest","Logistic Regression"]:
     for H in ["CTRP","GDSC2","PRISM"]:
         v=S2[mod][H]; pr_rows.append([f"LOAO, {H} held out ({SHORT[mod]})",str(v["n"]),f"{v['spearman']:+.3f} [{v['ci'][0]:.2f}, {v['ci'][1]:.2f}]"])
-    v=S2[mod]["pooled"]; pr_rows.append([f"LOAO, pooled ({SHORT[mod]})","99 rows",f"{v['spearman']:+.3f} [{v['drug_cluster_bootstrap_ci'][0]:.2f}, {v['drug_cluster_bootstrap_ci'][1]:.2f}]; perm. $P$={v['within_assay_permutation_p']:.0e}"])
+    v=S2[mod]["pooled"]; pr_rows.append([f"LOAO, pooled ({SHORT[mod]})","99 rows",f"{v['spearman']:+.3f} [{v['drug_cluster_bootstrap_ci'][0]:.2f}, {v['drug_cluster_bootstrap_ci'][1]:.2f}]; drug-block perm. $P$={BP[mod]['block_permutation_p']:.4f}"])
 SVIII=smalltable(["Analysis","$n$","Spearman [95\\% CI]"],"lcl",pr_rows,
-  "\\textbf{Table S8. Three-assay validation} (33 drugs in CTRP, GDSC2 fitted and PRISM; five splits). Ordered pairs relate concordance on all shared cell lines to external AUROC (random forest). Leave-one-assay-out (LOAO) relates the concordance of two assays to transfer into the held-out third assay; intervals are drug bootstraps, and the pooled interval resamples drugs with their three rows; the permutation shuffles scores across drugs within each held-out assay.")
+  "\\textbf{Table S8. Three-assay validation} (33 drugs in CTRP, GDSC2 fitted and PRISM; five splits). Ordered pairs relate concordance on all shared cell lines to external AUROC (random forest). Leave-one-assay-out (LOAO) relates the concordance of two assays to transfer into the held-out third assay; intervals are drug bootstraps, and the pooled interval resamples drugs with their three rows; the permutation permutes drug labels jointly across the three held-out assays, keeping each drug's three rows together (5,000 draws).")
 
 # ---------- SIX: statistics under the reference/test design
 am=sr["alt_metrics"]; cv=S1["concordance_vs_external"]; rf=cv["fitted|Random Forest"]; sw=S1["reference_size_sweep_RF_fitted"]; bl=EX["baselines"]; lo=EX["lodo"]
@@ -124,7 +127,11 @@ rig=[["Spearman, RF (drug bootstrap 95\\% CI)",f"{rf['spearman']:.3f} [{rf['ci']
      ["Spearman, five algorithms, GDSC2 mean viability",rng_('legacy')],
      ["Partial rank correlation, internal AUROC adjusted (RF)",f"{rf['partial_internal'][0]:.3f} ($P$={rf['partial_internal'][1]:.1e}, df={rf['partial_internal'][2]})"],
      ["Concordance on all shared lines (original design), RF",f"{S1['leaky_vs_independent_RF_fitted']['spearman_leaky']:.3f}"],
-     ["Reference set 20 / 50 / 100 lines",f"{sw['ref20']['spearman']:.3f} / {sw['ref50']['spearman']:.3f} / {sw['ref100']['spearman']:.3f}"],
+     ["Single reference set of 20 / 50 / 100 lines, median per-replicate Spearman",f"{RS['ref20']['spearman']['median']:.3f} / {RS['ref50']['spearman']['median']:.3f} / {RS['ref100']['spearman']['median']:.3f}"],
+     ["\\quad 95\\% of replicates, 50 / 100 lines",f"{RS['ref50']['spearman']['p2_5']:.3f}--{RS['ref50']['spearman']['p97_5']:.3f} / {RS['ref100']['spearman']['p2_5']:.3f}--{RS['ref100']['spearman']['p97_5']:.3f}"],
+     ["\\quad Full reference set, median per-split Spearman",f"{RS['full_reference_per_split']['spearman']['median']:.3f}"],
+     ["\\quad Screen ROC-AUC, 50 / 100 lines / full set",f"{RS['ref50']['screen_auc']['median']:.3f} / {RS['ref100']['screen_auc']['median']:.3f} / {RS['full_reference_per_split']['screen_auc']['median']:.3f}"],
+     ["\\quad Agreement with full-reference $\\rho\\geq0.5$ call, 50 / 100 lines",f"{RS['ref50']['call_agreement_with_full']['median']:.3f} / {RS['ref100']['call_agreement_with_full']['median']:.3f}"],
      ["Screen ROC-AUC (in-sample / leave-one-drug-out)",f"{EX['screen_auc_drug_level']:.3f} / {lo['roc_auc']:.3f}"],
      ["Leave-one-drug-out $R^2$, RMSE (pts), Brier (null)",f"{lo['r2']:.3f}, {lo['rmse_pts']:.1f}, {lo['brier']:.3f} ({lo['brier_null']:.3f})"],
      ["Nested threshold, median (held-out accuracy)",f"{S1['screen_RF_fitted']['nested_threshold_median']:.3f} ({S1['screen_RF_fitted']['nested_heldout_accuracy_median']:.3f})"],
@@ -135,7 +142,7 @@ rig=[["Spearman, RF (drug bootstrap 95\\% CI)",f"{rf['spearman']:.3f} [{rf['ci']
      ["Permutation $P$, original design (20,000 shuffles)",f"{sr['permutation_p']:.1e}"],
      ["Pearson / Kendall concordance metric, original design",f"{am['pearson_z']['spearman_with_ext']:+.3f} / {am['kendall']['spearman_with_ext']:+.3f}"]]
 am=sr["alt_metrics"]
-SIX=smalltable(["Statistic","Value"],"ll",rig,
+SIX=smalltable(["Statistic","Value"],"p{9.5cm}l",rig,
   "\\textbf{Table S9. Statistical summary} of the concordance--transfer relationship (CTRP$\\to$GDSC2, 58 drugs, reference/test design unless noted). The partial rank correlation is the Pearson correlation of rank residuals.")
 
 # ---------- SX: sensitivity
@@ -155,7 +162,7 @@ SXI=longtable(["Drug","$\\rho$","ext RF","MOA class","Feat.\\ Jaccard","Biomarke
 
 FIGCAPS=[
  ("figS1_threeassay_grid","\\textbf{Figure S1. Concordance predicts transfer across three assays.} Per-drug external AUROC (random forest, mean over five splits) versus cross-assay concordance (all shared cell lines) for each of the six ordered train$\\to$test pairs among CTRP, GDSC2 (fitted area under the curve) and PRISM; 33 drugs; red line, ordinary least squares; $\\rho_s$, Spearman."),
- ("figS2_pooled_loo","\\textbf{Figure S2. Pooled and leave-one-assay-out.} \\textbf{A} All six pairs pooled ($n$=198), colored by pair. \\textbf{B} Leave-one-assay-out for logistic regression (random forest in main Figure 5A): concordance of the two assays not involving the held-out assay versus transfer into it."),
+ ("figS2_pooled_loo","\\textbf{Figure S2. Pooled and leave-one-assay-out.} \\textbf{A} All six pairs pooled ($n$=198), colored by pair. \\textbf{B} Leave-one-assay-out for logistic regression (random forest in main Figure 3A): concordance of the two assays not involving the held-out assay versus transfer into it."),
  ("figS3_permutation_null","\\textbf{Figure S3. Permutation null.} Distribution of Spearman(concordance, external AUROC) under 20,000 random permutations of the drug labels; the observed value lies far in the tail."+ORIG+""),
  ("figS4_alt_metrics","\\textbf{Figure S4. Alternative concordance metrics.} External AUROC versus per-drug concordance computed as Spearman, Pearson (on standardized values), and Kendall $\\tau$."+ORIG+""),
  ("figS5_sensitivity","\\textbf{Figure S5. Sensitivity to analysis choices.} Spearman(concordance, external AUROC) under alternative label binarizations, numbers of selected features, and feature-selection methods; dashed line at 0.80."+ORIG+""),
@@ -165,12 +172,21 @@ FIGCAPS=[
  ("figS9_per_model","\\textbf{Figure S9. Per-drug internal versus external AUROC} for all five algorithms (reference/test design, mean over ten splits), colored by reference concordance."),
 ]
 figs="\n".join(f"""\\begin{{figure}}[h]\\centering
-\\includegraphics[width={0.62 if f.startswith('figS3') or f.startswith('figS6') or f.startswith('figS8') else 0.98}\\linewidth]{{supp_figures/{f}.pdf}}
+\\includegraphics[width={0.62 if f.startswith('figS3') or f.startswith('figS8') else (0.8 if f.startswith('figS6') else 0.98)}\\linewidth]{{supp_figures/{f}.pdf}}
 \\caption*{{{c}}}
 \\end{{figure}}
 \\clearpage""" for f,c in FIGCAPS)
 
-tables="\n\\clearpage\n".join([SI,SII,SIII,SIV,SV,SVI,SVII,SVIII,SIX,SX,SXI])
+SXII=smalltable(["Model","Implementation","Fixed settings"],"llp{9cm}",[
+  ["Logistic regression","scikit-learn","L2 penalty, $C=1.0$, max\\_iter 2000"],
+  ["Random forest","scikit-learn","400 trees, other settings default"],
+  ["XGBoost","xgboost","400 trees, depth 4, learning rate 0.05, subsample 0.8, colsample 0.8"],
+  ["SVM (RBF)","scikit-learn","RBF kernel, $C=1.0$, Platt probabilities"],
+  ["MLP","scikit-learn","hidden layers 256--64, $\\alpha=10^{-3}$, max\\_iter 300, early stopping"],
+  ["Preprocessing","--","genes above median variance; top 200 by $|$point-biserial $r|$; standardization (all on training cell lines)"]],
+  "\\textbf{Table S12. Model and preprocessing settings.} Fixed a priori, with no tuning on test data. The random state of each model is $42+s$ for split $s$ (fixed at 42 in the single-split supporting analyses). The leave-one-assay-out analysis used random forests of 300 trees; label-combination analyses used random forest and logistic regression only.")
+SUPP_METHODS=open(Path(__file__).with_name("supp_methods_src.tex")).read()
+tables="\n\\clearpage\n".join([SI,SII,SIII,SIV,SV,SVI,SVII,SVIII,SIX,SX,SXI,SXII])
 
 doc=f"""\\documentclass[11pt]{{article}}
 \\usepackage[T1]{{fontenc}}
@@ -191,8 +207,12 @@ cancer drug-response models\\\\[2pt]
 Yen-Jung Chiu
 \\end{{center}}
 \\vspace{{0.5em}}
-\\noindent This document contains Supplementary Figures S1--S9 and Supplementary
-Tables S1--S11.
+\\noindent This document contains Supplementary Methods, Supplementary Figures S1--S9 and
+Supplementary Tables S1--S12.
+\\clearpage
+
+\\section*{{Supplementary Methods}}
+{SUPP_METHODS}
 \\clearpage
 
 \\section*{{Supplementary Figures}}

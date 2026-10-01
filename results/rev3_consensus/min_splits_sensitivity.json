@@ -1,0 +1,199 @@
+{
+ "all|Log|gdsc2|C-S": [
+  65,
+  4.27
+ ],
+ "all|Log|gdsc2|C-G": [
+  65,
+  1.16
+ ],
+ "all|Log|gdsc2|C-A": [
+  65,
+  0.75
+ ],
+ "all|Log|prism|C-S": [
+  32,
+  2.93
+ ],
+ "all|Log|prism|C-G": [
+  32,
+  2.63
+ ],
+ "all|Log|prism|C-A": [
+  32,
+  0.52
+ ],
+ "all|Ran|gdsc2|C-S": [
+  65,
+  1.93
+ ],
+ "all|Ran|gdsc2|C-G": [
+  65,
+  -1.88
+ ],
+ "all|Ran|gdsc2|C-A": [
+  65,
+  -0.97
+ ],
+ "all|Ran|prism|C-S": [
+  32,
+  0.91
+ ],
+ "all|Ran|prism|C-G": [
+  32,
+  -0.14
+ ],
+ "all|Ran|prism|C-A": [
+  32,
+  -0.53
+ ],
+ "ten_valid_splits|Log|gdsc2|C-S": [
+  59,
+  4.27
+ ],
+ "ten_valid_splits|Log|gdsc2|C-G": [
+  59,
+  1.11
+ ],
+ "ten_valid_splits|Log|gdsc2|C-A": [
+  59,
+  0.46
+ ],
+ "ten_valid_splits|Log|prism|C-S": [
+  28,
+  3.02
+ ],
+ "ten_valid_splits|Log|prism|C-G": [
+  28,
+  2.75
+ ],
+ "ten_valid_splits|Log|prism|C-A": [
+  28,
+  0.01
+ ],
+ "ten_valid_splits|Ran|gdsc2|C-S": [
+  59,
+  1.93
+ ],
+ "ten_valid_splits|Ran|gdsc2|C-G": [
+  59,
+  -2.07
+ ],
+ "ten_valid_splits|Ran|gdsc2|C-A": [
+  59,
+  -1.09
+ ],
+ "ten_valid_splits|Ran|prism|C-S": [
+  28,
+  0.98
+ ],
+ "ten_valid_splits|Ran|prism|C-G": [
+  28,
+  -0.14
+ ],
+ "ten_valid_splits|Ran|prism|C-A": [
+  28,
+  -0.66
+ ],
+ "valid_splits_gdsc2": {
+  "(+)-JQ-1": 10,
+  "1035270-39-3": 10,
+  "284461-73-0": 10,
+  "A-1065-5": 10,
+  "ADAVOSERTIB": 10,
+  "AFATINIB": 10,
+  "AG-13736": 10,
+  "AK-55409": 1,
+  "ALISERTIB": 10,
+  "ALPELISIB": 10,
+  "APO866": 10,
+  "ASP-7487": 10,
+  "AZD 2171": 8,
+  "AZD-8055": 10,
+  "AZD7762": 10,
+  "BEZ235": 10,
+  "BI-2536": 10,
+  "BIBR-1532": 9,
+  "BIRB 796": 10,
+  "BMS 536924": 10,
+  "BMS-345541": 10,
+  "BMS-754807": 10,
+  "BORTEZOMIB": 10,
+  "CRA-032765": 10,
+  "CRIZOTINIB": 10,
+  "CYCLOPHOSPHAMIDE": 6,
+  "DABRAFENIB": 7,
+  "DASATINIB": 10,
+  "DINACICLIB": 10,
+  "DOCETAXEL": 10,
+  "ELOXATIN": 10,
+  "ENTINOSTAT": 10,
+  "ERLOTINIB": 10,
+  "EXEL-2880": 10,
+  "FLUOROURACIL": 10,
+  "GEFITINIB": 10,
+  "GEMCITABINE": 10,
+  "GX15-070": 10,
+  "ICI-46474": 10,
+  "KU-55933": 10,
+  "LAPATINIB": 10,
+  "M-39831": 10,
+  "MIRA 1": 10,
+  "MK 2206": 10,
+  "MOLIBRESIB": 10,
+  "MST 312": 10,
+  "NAVITOCLAX": 10,
+  "NELARABINE": 10,
+  "NILOTINIB": 10,
+  "NVP ADW742": 10,
+  "OLAPARIB": 10,
+  "PACLITAXEL": 10,
+  "PEVONEDISTAT": 10,
+  "PICTILISIB": 10,
+  "PLX 4720": 10,
+  "RAPAMYCIN": 10,
+  "REBEMADLIN": 10,
+  "RUXOLITINIB": 10,
+  "SEPANTRONIUM BROMIDE": 10,
+  "TENIPOSIDE": 9,
+  "TOPOTECAN": 10,
+  "TRAMETINIB": 10,
+  "VENETOCLAX": 10,
+  "VORINOSTAT": 10,
+  "YK 4-279": 10
+ },
+ "valid_splits_prism": {
+  "AFATINIB": 10,
+  "ALISERTIB": 10,
+  "ALPELISIB": 10,
+  "AZD7762": 10,
+  "BI-2536": 10,
+  "BIBR-1532": 9,
+  "BMS-345541": 10,
+  "BMS-754807": 10,
+  "BORTEZOMIB": 10,
+  "CRIZOTINIB": 10,
+  "CYCLOPHOSPHAMIDE": 4,
+  "DABRAFENIB": 7,
+  "DASATINIB": 10,
+  "DINACICLIB": 10,
+  "DOCETAXEL": 10,
+  "ENTINOSTAT": 10,
+  "ERLOTINIB": 10,
+  "GEFITINIB": 10,
+  "GEMCITABINE": 10,
+  "LAPATINIB": 10,
+  "NAVITOCLAX": 10,
+  "NELARABINE": 10,
+  "NILOTINIB": 10,
+  "OLAPARIB": 10,
+  "PACLITAXEL": 10,
+  "PEVONEDISTAT": 10,
+  "RUXOLITINIB": 10,
+  "TENIPOSIDE": 9,
+  "TOPOTECAN": 10,
+  "TRAMETINIB": 10,
+  "VENETOCLAX": 10,
+  "VORINOSTAT": 10
+ }
+}

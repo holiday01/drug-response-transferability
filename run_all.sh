@@ -6,7 +6,10 @@
 #  * run_consensus writes R3_consensus_per_drug.csv (drug list for REV-3);
 #  * run_robustness writes R6_bidirectional_per_drug.csv (Fig. 5D);
 #  * the *_rev figure/supplement scripts run after the original ones and
-#    overwrite Figs 1, 2, 4, 5 and S1, S2, S9 with the primary-design versions.
+#    overwrite Figs 1, 2, 4, 5, 6 and S1, S2, S9 with the final versions
+#    (make_figures2 writes obsolete Figs 5 and 6 and must run before them).
+#  Figure files keep their working names; in the paper fig5_robustness is
+#  Figure 3 and fig3_determinants is Figure 5.
 set -euo pipefail
 cd "$(dirname "$0")"
 # Heavy scikit-learn jobs are unstable with unrestricted BLAS threading.
@@ -24,14 +27,16 @@ done
 
 # Primary analyses (reference/test design, GDSC2 fitted AUC)
 for s in run_independent_validation analyze_independent_validation \
-         run_three_assay_rev run_consensus_rev analyze_rev_extra; do
+         run_three_assay_rev run_consensus_rev analyze_rev_extra \
+         run_refsize_single_draw_rev run_three_assay_blockperm_rev \
+         analyze_consensus_min_splits_rev; do
   echo "=== $s"
   python scripts/$s.py
 done
 
 # Figures, supplement and number checks
 for s in make_figures make_figures2 make_supp_figures \
-         make_figures_rev make_supp_figures_rev build_supp_rev \
+         make_figures_rev make_fig6_rev make_supp_figures_rev build_supp_rev \
          verify_numbers verify_numbers_rev; do
   echo "=== $s"
   python scripts/$s.py

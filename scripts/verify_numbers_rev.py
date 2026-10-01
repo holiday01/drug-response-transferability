@@ -15,6 +15,12 @@ S1 = json.load(open(f"{R}/rev1_independent/summary.json"))
 EX = json.load(open(f"{R}/rev1_independent/extra_summary.json"))
 S2 = json.load(open(f"{R}/rev2_three_assay/summary.json"))
 S3 = json.load(open(f"{R}/rev3_consensus/summary.json"))
+RS = json.load(open(f"{R}/rev1b_refsize_single/summary.json"))
+_rep = pd.read_csv(f"{R}/rev1b_refsize_single/replicates.csv")
+for _k in (20, 50, 100):  # exact values from replicates (summary.json is pre-rounded to 3 dp)
+    _x = _rep[_rep.k == _k].spearman
+    RS[f"ref{_k}"]["spearman"].update(median=_x.median(), p2_5=_x.quantile(0.025), p97_5=_x.quantile(0.975))
+BP = json.load(open(f"{R}/rev2_three_assay/block_permutation.json"))
 cv = S1["concordance_vs_external"]
 f2 = lambda x: f"{x:.2f}"
 f1 = lambda x: f"{x:.1f}"
@@ -41,10 +47,15 @@ checks = [
     ("legacy range", f"{f2(min(cv[f'legacy|{m}']['spearman'] for m in M))}--{f2(max(cv[f'legacy|{m}']['spearman'] for m in M))}", "0.81--0.84"),
     ("summary agreement", f2(S1["gdsc2_summary_agreement"]["median_fitted_vs_legacy"]), "median Spearman 0.90"),
     ("crizotinib", f2(S1["gdsc2_summary_agreement"]["min_fitted_vs_legacy"]), "crizotinib (0.31)"),
-    ("ref20", f2(S1["reference_size_sweep_RF_fitted"]["ref20"]["spearman"]), "0.83, 0.85 and 0.84"),
-    ("ref50", f2(S1["reference_size_sweep_RF_fitted"]["ref50"]["spearman"]), "0.83, 0.85 and 0.84"),
-    ("ref100", f2(S1["reference_size_sweep_RF_fitted"]["ref100"]["spearman"]), "0.83, 0.85 and 0.84"),
-    ("ref sd", f2(S1["reference_size_sweep_RF_fitted"]["ref20"]["median_within_drug_sd_of_concordance"]), "0.19 with 20 cell lines, 0.11 with 50 and 0.07"),
+    ("single ref50", f2(RS["ref50"]["spearman"]["median"]), "correlation between concordance and external AUROC was 0.67 with 50 reference cell lines"),
+    ("single ref50 range", f"{f2(RS['ref50']['spearman']['p2_5'])}--{f2(RS['ref50']['spearman']['p97_5'])}", "(95\\% of replicates 0.53--0.77)"),
+    ("single ref100", f2(RS["ref100"]["spearman"]["median"]), "increased to 0.73 with 100"),
+    ("single ref100 range", f"{f2(RS['ref100']['spearman']['p2_5'])}--{f2(RS['ref100']['spearman']['p97_5'])}", "(0.64--0.82)"),
+    ("single full", f2(float(pd.read_csv(f"{R}/rev1b_refsize_single/full_reference_per_split.csv").spearman.median())), "compared with 0.79 using the full reference set"),
+    ("single ref20", f"{f2(RS['ref20']['spearman']['median'])} ({f2(RS['ref20']['spearman']['p2_5'])}--{f2(RS['ref20']['spearman']['p97_5'])})", "with 20 cell lines it was 0.53 (0.34--0.68)"),
+    ("single screen", f"{f2(RS['ref50']['screen_auc']['median'])} with 50 and {f2(RS['ref100']['screen_auc']['median'])} with 100 reference cell lines, against {f2(RS['full_reference_per_split']['screen_auc']['median'])}", "0.82 with 50 and 0.86 with 100 reference cell lines, against 0.89"),
+    ("single agreement", f"{RS['ref50']['call_agreement_with_full']['median']*100:.0f}\\% of drugs with 50 and {RS['ref100']['call_agreement_with_full']['median']*100:.0f}\\%", "81\\% of drugs with 50 and 86\\%"),
+    ("block perm RF", f"{BP['Random Forest']['block_permutation_p']:.3f}", "drug-block permutation $P = 0.006$"),
     ("median n ref", str(int(S1["reference_size_sweep_RF_fitted"]["full_reference"]["median_n_ref"])), "median 333"),
     ("test lines", str(int(S1["test_lines_median"])), "median 247"),
     ("screen AUC", f2(EX["screen_auc_drug_level"]), "ROC-AUC of 0.91 for random"),

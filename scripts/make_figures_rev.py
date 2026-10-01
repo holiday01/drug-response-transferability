@@ -135,17 +135,20 @@ ax[0, 0].axhline(0.5, color=GREY, ls=":", lw=0.9)
 ax[0, 0].set_xlabel("Concordance of the other two assays")
 ax[0, 0].set_ylabel("Transfer into held-out assay\n(external AUROC)")
 ax[0, 0].set_ylim(0.37, 1.08)
-ax[0, 0].legend(fontsize=7.5, loc="upper left", handletextpad=0.2, borderpad=0.3, framealpha=0.9); panel(ax[0, 0], "A")
-sw = S1["reference_size_sweep_RF_fitted"]
-ks = ["ref20", "ref50", "ref100"]; nlab = ["20", "50", "100", f"all\n(~{int(sw['full_reference']['median_n_ref'])})"]
-vals = [sw[k]["spearman"] for k in ks] + [sw["full_reference"]["spearman"]]
-err_l = [sw[k]["spearman"] - sw[k]["ci"][0] for k in ks] + [0]
-err_h = [sw[k]["ci"][1] - sw[k]["spearman"] for k in ks] + [0]
-ax[0, 1].errorbar(range(4), vals, yerr=[err_l, err_h], fmt="o-", color=BLUE, capsize=3)
-for i, k in enumerate(ks):
-    ax[0, 1].text(i, 0.52, f"s.d.(ρ)\n{sw[k]['median_within_drug_sd_of_concordance']:.2f}", ha="center", fontsize=7.5, color=GREY)
-ax[0, 1].set_xlim(-0.4, 3.3); ax[0, 1].set_xticks(range(4)); ax[0, 1].set_xticklabels(nlab)
-ax[0, 1].set_ylim(0.45, 1.0); ax[0, 1].set_xlabel("Reference cell lines with both assays")
+ax[0, 0].legend(fontsize=8, loc="upper left", handletextpad=0.2, borderpad=0.3, framealpha=0.9); panel(ax[0, 0], "A")
+# B: single reference set per drug (one draw, one split) -- rev1b_refsize_single
+rep = pd.read_csv(f"{R}/rev1b_refsize_single/replicates.csv")
+fr = pd.read_csv(f"{R}/rev1b_refsize_single/full_reference_per_split.csv")
+nref = int(S1["reference_size_sweep_RF_fitted"]["full_reference"]["median_n_ref"])
+groups = [rep[rep.k == k].spearman.to_numpy() for k in (20, 50, 100)] + [fr.spearman.to_numpy()]
+bp = ax[0, 1].boxplot(groups, positions=range(4), widths=0.5, whis=(2.5, 97.5), showfliers=False,
+                      patch_artist=True, medianprops=dict(color="k", lw=1.4))
+for b, c in zip(bp["boxes"], [BLUE, BLUE, BLUE, GREEN]):
+    b.set_facecolor(c); b.set_alpha(0.45)
+for i, g in enumerate(groups):
+    ax[0, 1].text(i, np.percentile(g, 97.5) + 0.03, f"{np.median(g):.2f}", ha="center", fontsize=8.5)
+ax[0, 1].set_xticks(range(4)); ax[0, 1].set_xticklabels(["20", "50", "100", f"all\n(~{nref})"])
+ax[0, 1].set_ylim(0.1, 1.0); ax[0, 1].set_xlabel("Reference cell lines with both assays")
 ax[0, 1].set_ylabel("Spearman (concordance,\nexternal AUROC)"); panel(ax[0, 1], "B")
 cal = S1["transfer_rate_by_bin_RF_fitted"]
 labs = ["≤0.20", "0.20–0.35", "0.35–0.50", "0.50–0.65", ">0.65"]

@@ -1,0 +1,86 @@
+{
+  "seed": 42,
+  "draws_per_split": 200,
+  "splits": 10,
+  "unit": "one k-line reference per drug, one split; statistics across drugs",
+  "full_reference_per_split": {
+    "spearman": {
+      "median": 0.795,
+      "p2_5": 0.747,
+      "p97_5": 0.851,
+      "min": 0.741
+    },
+    "screen_auc": {
+      "median": 0.892,
+      "p2_5": 0.854,
+      "p97_5": 0.92,
+      "min": 0.853
+    }
+  },
+  "ref20": {
+    "n_drugs_median": 58.0,
+    "spearman": {
+      "median": 0.526,
+      "p2_5": 0.343,
+      "p97_5": 0.681,
+      "min": 0.192
+    },
+    "screen_auc": {
+      "median": 0.748,
+      "p2_5": 0.63,
+      "p97_5": 0.853,
+      "min": 0.568
+    },
+    "call_agreement_with_full": {
+      "median": 0.741,
+      "p2_5": 0.621,
+      "p97_5": 0.845,
+      "min": 0.534
+    },
+    "frac_replicates_spearman_ge_0p7": 0.011
+  },
+  "ref50": {
+    "n_drugs_median": 58.0,
+    "spearman": {
+      "median": 0.665,
+      "p2_5": 0.533,
+      "p97_5": 0.769,
+      "min": 0.421
+    },
+    "screen_auc": {
+      "median": 0.817,
+      "p2_5": 0.726,
+      "p97_5": 0.894,
+      "min": 0.638
+    },
+    "call_agreement_with_full": {
+      "median": 0.81,
+      "p2_5": 0.707,
+      "p97_5": 0.897,
+      "min": 0.621
+    },
+    "frac_replicates_spearman_ge_0p7": 0.272
+  },
+  "ref100": {
+    "n_drugs_median": 58.0,
+    "spearman": {
+      "median": 0.731,
+      "p2_5": 0.645,
+      "p97_5": 0.819,
+      "min": 0.573
+    },
+    "screen_auc": {
+      "median": 0.856,
+      "p2_5": 0.787,
+      "p97_5": 0.913,
+      "min": 0.702
+    },
+    "call_agreement_with_full": {
+      "median": 0.862,
+      "p2_5": 0.793,
+      "p97_5": 0.948,
+      "min": 0.724
+    },
+    "frac_replicates_spearman_ge_0p7": 0.769
+  }
+}
