@@ -24,8 +24,6 @@ TCGA_DRUG = Path(os.environ.get("DRT_TCGA_DRUG", DATA_DIR / "tcga" / "tcga_paire
 # SHA-256 in checksums/SHA256SUMS. Used by the reference/test (revision) analyses.
 GDSC2_FITTED = Path(os.environ.get("DRT_GDSC2_FITTED",
                                    DATA_DIR / "gdsc" / "GDSC2_fitted_dose_response_27Oct23.xlsx"))
-# Manuscript source checked by verify_numbers_rev.py (optional; not distributed).
-MANUSCRIPT_TEX = Path(os.environ.get("DRT_MANUSCRIPT_TEX", REPO_DIR / "manuscript" / "main.tex"))
 
 RESULTS_DIR = Path(os.environ.get("DRT_RESULTS_DIR", REPO_DIR / "results"))
 OUTPUT_DIR = Path(os.environ.get("DRT_OUTPUT_DIR", REPO_DIR / "outputs"))
