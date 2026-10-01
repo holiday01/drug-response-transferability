@@ -46,3 +46,21 @@ AUROC; the screening ROC-AUC (external AUROC $\geq 0.70$) and the agreement of t
 $\rho \geq 0.5$ call with the full-reference call were also recorded. Each size was
 drawn 200 times per split (2{,}000 replicates; seed 42; no model retrained).
 Results are in Table~S9 and main Figure~3B.
+
+\subsection*{Use of AI tools}
+Claude (Anthropic), used through the Claude Code command-line tool with Claude
+models available between July and October 2026, was used to write and run the
+analysis code, generate the figures and supplementary tables, draft and revise the
+manuscript text, check reported numbers against the result files, and edit
+language. The tool worked in the author's computing environment on the public input
+data listed in the main text; no patient-identifiable or non-public data were
+provided to it. The following safeguards were applied. Every headline number in the
+main text is checked by a script (\texttt{verify\_numbers\_rev.py}, 67 checks)
+that recomputes it from the saved result files and requires the quoted phrase to
+appear in the manuscript. Scripts re-run from the public code repository, including
+those for the single-reference-set, drug-block permutation and valid-split analyses,
+reproduced the corresponding result files used in the paper byte for byte, and the
+supplement built from the repository is identical to this document. Analyses,
+figures and text were reviewed by the author, who takes full responsibility for the
+content.
+
