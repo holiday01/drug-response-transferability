@@ -1,9 +1,14 @@
 # drug-response-transferability
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23095964.svg)](https://doi.org/10.5281/zenodo.23095964)
+
+Archived on Zenodo. The badge DOI always resolves to the latest version; the
+version used in the manuscript is v1.0.0, [10.5281/zenodo.23095965](https://doi.org/10.5281/zenodo.23095965).
+
 Code and result files for the manuscript
 
 > **Cross-assay concordance predicts the cross-dataset transferability of cancer drug-response models**
-> Yen-Jung Chiu, Department of Biomedical Engineering, Chang Gung University (manuscript under review).
+> Yen-Jung Chiu, Department of Biomedical Engineering, Chang Gung University (manuscript).
 
 Models that predict cancer drug response from gene expression often lose accuracy
 on an independent dataset. For each drug measured by two independent sensitivity
